@@ -1,0 +1,37 @@
+.visitorsPage {
+	.adminTitleTab {
+		h2 {
+			font-size: 25px;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+	.headRow {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #D3D3D3;
+		.statBlock {
+			background: #F4F9FB;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 25px;
+			gap: 40px;
+			.leftSide, .rightSide {
+				display: flex;
+				flex-direction: column;
+				gap: 7px;
+				font-size: 16px;
+			}
+			.rightSide {
+				font-weight: 600;
+			}
+		}
+	}
+}

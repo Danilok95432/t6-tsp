@@ -1,0 +1,72 @@
+.selectSchema {
+	width: 100%;
+	max-width: 650px;
+	label {
+		font-size: 17px;
+	}
+	span {
+		font-size: 17px;
+	}
+}
+
+div.checkboxRow {
+	flex-direction: column;
+	gap: 2px;
+	margin-bottom: 20px;
+	.desc {
+		font-size: 17px;
+		margin-left: 30px;
+		font-weight: 400;
+		max-width: 1000px;
+	}
+	.marginDesc {
+		margin-bottom: 20px;
+	}
+	p {
+		font-size: 20px;
+		font-weight: 700;
+		margin-left: 7px;
+	}
+	.inputCont {
+		padding: 0 0 0 30px;
+	}
+	.inputRow {
+		gap: 18px;
+		align-items: center;
+		flex-wrap: nowrap;
+		margin-left: 25px;
+		margin-top: 16px;
+		.label {
+			font-size: 17px;
+			font-weight: 600;
+			width: 172px;
+		}
+	}
+	&:last-child {
+		margin-bottom: 30px;
+	}
+	.selectRow {
+		gap: 15px;
+		align-items: end;
+		margin-left: 25px;
+		max-width: 1200px;
+		width: 100%;
+		flex-wrap: nowrap;
+		margin-bottom: 20px;
+		a {
+			color: #008e99;
+			font-size: 17px;
+			margin-bottom: 8px;
+		}
+		.selectSchema {
+			width: 100%;
+			max-width: 650px;
+			label {
+				font-size: 17px;
+			}
+			span {
+				font-size: 17px;
+			}
+		}
+	}
+}

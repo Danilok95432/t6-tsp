@@ -1,0 +1,18 @@
+div.dateSection {
+  gap: 5%;
+  .dateElem {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.inputWrapper {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	width: 100%;
+}
+
+.tooltip_date {
+	margin-top: -13px;
+}

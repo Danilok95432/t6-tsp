@@ -1,0 +1,58 @@
+.inputWrapper {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	width: 100%;
+}
+
+.inputWrapperSpecial {
+  display: flex;
+	align-items: center;
+	column-gap: 40px;
+	width: 100%;
+  .checkbox {
+    font-size: 20px;
+  }
+}
+
+.inputPhone {
+  font-size: 20px;
+}
+
+.tooltip {
+	margin-top: 5px;
+}
+
+.tooltip_type {
+	margin-top: -15px;
+}
+
+.tooltip_teg {
+	margin-top: 27px;
+}
+
+.typeLevelWrapper {
+	width: 100%;
+}
+
+div.selectRow {
+  gap: 15px;
+  p {
+    font-size: 17px;
+  }
+}
+
+div.dropzoneRow {
+  gap: 15px;
+  align-items: center;
+  flex-wrap: nowrap;
+  div.tooltipSpecial {
+    margin-top: 35px;
+  }
+}
+
+.expressDropPhoto {
+  max-width: 100%;
+  width: 100%;
+}
+

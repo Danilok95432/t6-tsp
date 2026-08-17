@@ -1,0 +1,49 @@
+.adminPersonal {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto;
+
+  a {
+    svg {
+      transition: all .3s;
+    }
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.loginBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  margin-left: auto;
+  height: 25px;
+  border: none;
+  outline: none;
+}
+
+._unread {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: #FF0000;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+  }
+}
+.userName {
+  color: #ffffff;
+  font-size: 18px;
+}

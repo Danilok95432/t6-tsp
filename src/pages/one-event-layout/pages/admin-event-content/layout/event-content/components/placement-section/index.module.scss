@@ -1,0 +1,23 @@
+.placementItem {
+  display: grid;
+  gap: 15px;
+  width: 100%;
+  padding-right: 50px;
+
+  grid-template: auto / 90px 1fr;
+  grid-auto-rows: 1fr;
+  position: relative;
+  @media (max-width: 768px) {
+    grid-template: auto / 1fr;
+  }
+  button {
+    width: 13px;
+    height: 15px;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

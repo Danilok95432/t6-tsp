@@ -1,0 +1,18 @@
+.linkRow {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
+
+	.linkRowInputs {
+		flex-grow: 1;
+		grid-template: auto / 65px 1fr 1fr 1fr 1fr;
+		align-items: center;
+
+		@media (max-width: 768px) {
+			grid-template: auto / 1fr;
+		}
+	}
+}

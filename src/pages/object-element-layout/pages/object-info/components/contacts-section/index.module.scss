@@ -1,0 +1,10 @@
+.objectContactsInner {
+	max-width: 78%;
+	@media (max-width: 1024px) {
+		max-width: 100%;
+	}
+}
+
+h2.objectContactsTitle {
+	font-size: 16px;
+}

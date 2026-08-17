@@ -1,0 +1,28 @@
+.searchRow {
+	grid-template-columns:
+		minmax(294px, 1fr)
+    minmax(294px, 1fr)
+    minmax(294px, 1fr)
+		minmax(294px, 1fr)
+		minmax(294px, 1fr);
+		@media (max-width: 1440px) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+.newsTable {
+	grid-template-columns:
+		minmax(385px, 1fr)
+		minmax(200px, 1fr)
+		minmax(385px, 1fr)
+		minmax(300px, 1fr)
+		minmax(300px, 1fr);
+	.checkBoxWrapperNews {
+		margin: 14px auto auto 25px;
+	}
+}
+
+.eventNewsContainer {
+	position: relative;
+	min-height: 620px;
+}

@@ -1,0 +1,8 @@
+.oneQuestionInputsSection {
+	width: 1140px;
+	margin: 0;
+
+	@media (width < 1024px) {
+		width: 100%;
+	}
+}

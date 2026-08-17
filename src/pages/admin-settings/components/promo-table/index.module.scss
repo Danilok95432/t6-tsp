@@ -1,0 +1,14 @@
+.promosWrapper {
+  margin-bottom: 50px;
+
+  h3 {
+    padding-left: 28px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+}
+
+.promoTable {
+  grid-template-columns: minmax(300px, 2fr) minmax(100px, 1fr) minmax(200px, 1.2fr) minmax(130px, 0.6fr) minmax(50px, 0.2fr)
+}

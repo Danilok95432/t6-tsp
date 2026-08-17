@@ -1,0 +1,31 @@
+.searchRow {
+  grid-template-columns: 
+  minmax(217px, 217px)
+  minmax(453px, 453px)
+  minmax(131px, 131px)
+  minmax(105px, 105px);
+}
+
+.refundsTable {
+  grid-template-columns:
+  minmax(95px, 95px)
+  minmax(120px, 120px)
+  minmax(282px, 282px)
+  minmax(120px, 120px)
+  minmax(120px, 120px)
+  minmax(120px, 120px)
+  minmax(200px, 200px)
+  minmax(215px, 215px)
+  minmax(215px, 215px)
+  minmax(50px, 1fr);
+  .checkBoxWrapperNews {
+    margin: 14px auto auto 25px;
+  }
+}
+
+.titleNewsTable {
+  max-width: 750px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}

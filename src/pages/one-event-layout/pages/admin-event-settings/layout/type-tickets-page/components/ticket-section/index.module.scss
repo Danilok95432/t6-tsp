@@ -1,0 +1,31 @@
+.text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.checkBox {
+  p {
+    font-size: 18px;
+  }
+}
+
+a.link {
+  text-decoration: underline 1px solid black;
+  color: black;
+}
+
+.guestInput {
+  max-width: 250px;
+}
+
+div.settingElem {
+  flex-direction: column;
+  gap: 0;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+div.btnsRow {
+  gap: 8px;
+}

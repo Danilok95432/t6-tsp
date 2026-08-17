@@ -1,0 +1,40 @@
+div.disclaimer {
+  width: 100%;
+  height: max-content;
+  padding: 12px;
+  gap: 10px;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  transition: all 1.5s ease-in-out;
+  box-shadow: 0 0 10px 0 rgba(40, 106, 145, 0.25);
+  transform-origin: 100% 100%;
+  .textRow {
+    width: 100%;
+    gap: 10px;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .content {
+    max-width: 94%;
+    font-size: 17px;
+    transition: opacity 1.2s ease-in-out;
+  }
+}
+
+div.closeVector {
+  cursor: pointer;
+}
+
+div.disclaimer.close {
+  transform: scale(0);
+  opacity: 0;
+  width: 0%;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  
+  p {
+    opacity: 0;
+  }
+}

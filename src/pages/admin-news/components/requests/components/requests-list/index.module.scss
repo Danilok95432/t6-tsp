@@ -1,0 +1,29 @@
+.searchRow {
+  grid-template-columns: 
+  minmax(300px, 400px)
+  minmax(150px, 280px)
+  minmax(80px, 220px)
+  minmax(190px, 190px)
+  minmax(190px, 190px)
+  minmax(190px, 190px);
+  @media (max-width: 1700px) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+.requestsTable {
+  grid-template-columns:
+  minmax(400px, 3.2fr)
+  minmax(120px, 0.6fr)
+  minmax(120px, 0.6fr)
+  minmax(100px, 0.5fr)
+  minmax(140px, 0.9fr)
+  minmax(50px, 0.2fr);
+}
+
+.titleRequestsTable {
+  max-width: 750px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}

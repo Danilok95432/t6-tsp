@@ -1,0 +1,24 @@
+div.tableSection {
+	h3 {
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+}
+
+.passesTable {
+	max-width: 800px;
+  padding-bottom: 30px;
+	min-width: max-content;
+	grid-template-columns:
+		minmax(35px, 70px)
+		minmax(172px, 172px)
+		minmax(172px, 172px)
+		minmax(172px, 172px)
+		minmax(172px, 172px)
+		minmax(80px, 1fr);
+}
+
+.title {
+  font-size: 14px;
+  margin-bottom: 10px;
+}

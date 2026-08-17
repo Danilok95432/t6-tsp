@@ -1,0 +1,16 @@
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  a {
+    color: #015DB9;
+  }
+}

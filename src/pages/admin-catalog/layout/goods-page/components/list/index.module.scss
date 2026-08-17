@@ -1,0 +1,53 @@
+.searchRow {
+  grid-template-columns: 
+  minmax(300px, 515px);
+}
+
+.goodsTable {
+  grid-template-columns:
+  minmax(80px, 80px)
+  minmax(452px, 18fr)
+  minmax(93px, 93px)
+  minmax(114px, 114px)
+  minmax(146px, 146px)
+  minmax(118px, 118px)
+  minmax(133px, 133px)
+  minmax(144px, 144px)
+  minmax(90px, 90px)
+  minmax(90px, 90px)
+  minmax(80px, 1fr);
+  th:nth-child(9) {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  td:nth-child(7) {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+  }
+  td:nth-child(8) {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+  }
+  .checkBoxWrapperGoods {
+    margin: 14px auto auto 32px;
+    justify-content: center;
+  }
+  .checkBoxWrapperNews {
+    margin: 14px auto auto 25px;
+  }
+}
+
+.titleNewsTable {
+  max-width: 750px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}

@@ -1,0 +1,61 @@
+div.addModal {
+	width: 530px;
+
+	@media (max-width: 1440px) {
+		width: 70vw;
+	}
+
+	:global {
+		.modal-header {
+			background: #ffffff;
+			border-bottom: 1px solid #e1e1e1;
+      padding: 20px 30px;
+
+			button svg rect {
+				fill: #000000;
+				stroke: #000000;
+			}
+
+			h3 {
+				font-size: 18px;
+				color: #000000;
+			}
+		}
+    .modal-content {
+      padding: 18px 30px 30px;
+    }
+	}
+
+	.addForm {
+		flex-direction: column;
+		gap: 24px;
+		div.adminRow {
+			flex-direction: column;
+			gap: 5px;
+			.disclaimer {
+				font-size: 12px;
+			}
+		}
+    .repeat {
+      flex-direction: column;
+      gap: 5px;
+      p {
+        font-size: 14px;
+      }
+    }
+
+		.inputWrapper {
+			display: flex;
+			align-items: center;
+			column-gap: 10px;
+			width: 100%;
+		}
+    .filesDrop {
+      label {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    }
+	}
+}

@@ -1,0 +1,28 @@
+.searchRow {
+  grid-template-columns: 
+  minmax(300px, 2.2fr)
+  minmax(130px, 1.1fr)
+  minmax(130px, 1.3fr)
+  minmax(100px, 0.6fr)
+  minmax(120px, 0.6fr)
+  minmax(50px, 0.2fr);
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+.eventsTable {
+  grid-template-columns:
+  minmax(360px, 2.2fr)
+  minmax(150px, 1.1fr)
+  minmax(270px, 1.3fr)
+  minmax(100px, 0.6fr)
+  minmax(100px, 0.6fr)
+  minmax(50px, 0.2fr);
+  tr:last-child {
+    td {
+      border-bottom: 1px solid #F5F5F5;
+      margin-bottom: 30px;
+    }
+  }
+}

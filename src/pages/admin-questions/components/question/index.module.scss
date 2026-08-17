@@ -1,0 +1,27 @@
+.oneQuestionPage {
+	padding-inline: 30px;
+
+	h3 {
+		font-size: 25px;
+		font-weight: 700;
+		line-height: 1.2;
+		color: #000;
+		margin: 0 0 20px 0;
+	}
+}
+
+.oneQuestionFormContent {
+	display: flex;
+	column-gap: 60px;
+
+	@media (width < 1024px) {
+		flex-direction: column;
+	}
+}
+
+.oneQuestionSwitchBtns {
+	@media (width < 1024px) {
+		max-width: 240px;
+		padding-top: 30px;
+	}
+}

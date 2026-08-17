@@ -1,0 +1,24 @@
+div.supportRow {
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1570px;
+	.addBtn {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		align-items: center;
+		padding: 10px 18px;
+		border: 1px solid #fff;
+		background: transparent;
+		border-radius: 3px;
+		font-size: 14px;
+		color: #fff;
+    margin-bottom: 25px;
+    transition: all .3s ease-in-out;
+    &:hover {
+      background: #fff;
+      color: #000;
+      border: 1px solid transparent;
+    }
+	}
+}

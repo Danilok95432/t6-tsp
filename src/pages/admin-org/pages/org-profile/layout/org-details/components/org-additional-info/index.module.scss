@@ -1,0 +1,33 @@
+.infoSection {
+  max-width: 750px;
+}
+
+.inputWrapper {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	width: 100%;
+}
+
+.tooltip {
+	margin-top: 10px;
+}
+
+.tooltip_type {
+	margin-top: -15px;
+}
+
+.tooltip_teg {
+	margin-top: 27px;
+}
+
+.typeLevelWrapper {
+	width: 100%;
+}
+
+.selectRow {
+  gap: 15px;
+  p {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,47 @@
+.titleSectionInner {
+  width: 100%;
+}
+
+.inputWrapper {
+	display: flex;
+  flex-direction: row;
+	align-items: center;
+	column-gap: 10px;
+	width: 100%;
+}
+
+.controlledFormElement {
+	max-width: 1140px;
+}
+
+.tooltip {
+	margin-top: 10px;
+}
+
+.inputWrapperTextArea {
+	display: flex;
+	align-items: start;
+	column-gap: 10px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.tooltip_short {
+	margin-top: 8px;
+}
+
+.tooltip_textArea {
+	margin-top: 30px;
+}
+
+.tooltip_type {
+	margin-top: -15px;
+}
+
+.tooltip_teg {
+	margin-top: 27px;
+}
+
+.typeLevelWrapper {
+	width: 100%;
+}

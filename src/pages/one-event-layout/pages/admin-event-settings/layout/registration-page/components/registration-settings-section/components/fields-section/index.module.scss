@@ -1,0 +1,32 @@
+.fields {
+  margin-bottom: 20px;
+  h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .fieldsSection {
+    gap: 24px;
+    flex-direction: column;
+    .leftSideRow, .rightSideRow {
+      flex-direction: row;
+      gap: 80px;
+    }
+    .fieldElem {
+      gap: 5px;
+      flex-direction: column;
+      .checkRow {
+        row-gap: 10px;
+        column-gap: 20px;
+        max-width: 276px;
+      }
+    }
+  }
+}
+
+div.dateSection {
+  gap: 10%;
+  .dateElem {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

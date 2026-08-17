@@ -1,0 +1,67 @@
+.programElementsPage {
+	position: relative;
+	min-height: 800px;
+	.searchRow {
+		grid-template-columns:
+			minmax(372px, 2.35fr)
+      minmax(130px, 0.8fr)
+      minmax(372px, 2.35fr)
+			minmax(150px, 1fr)
+			minmax(120px, 0.7fr)
+			minmax(100px, 0.5fr)
+      minmax(100px, 0.5fr)
+      minmax(150px, 1fr)
+			minmax(50px, 0.2fr);
+		@media (max-width: 1600px) {
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		}
+		@media (max-width: 425px) {
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		}
+	}
+
+	.programTable {
+		grid-template-columns:
+			minmax(372px, 2.35fr)
+      minmax(130px, 0.8fr)
+      minmax(372px, 2.35fr)
+			minmax(150px, 1fr)
+			minmax(120px, 0.7fr)
+			minmax(100px, 0.5fr)
+      minmax(100px, 0.5fr)
+      minmax(150px, 1fr)
+			minmax(50px, 0.2fr);
+		.priorityBox {
+			width: 50px;
+			height: 27px;
+			border-radius: 3px;
+			font-size: 14px;
+			border: 1px solid #afafaf;
+			text-align: center;
+			margin-left: 22px;
+		}
+	}
+
+	.titleProgramTable {
+		max-width: 750px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-wrap: nowrap;
+	}
+
+	.title {
+		font-size: 25px;
+		font-weight: 700;
+		line-height: 1.2;
+		color: #000;
+		margin: 0 0 20px 29px;
+	}
+}
+
+.tableFooterProgramWrapper {
+  padding: 0 28px;
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  width: 100%;
+}

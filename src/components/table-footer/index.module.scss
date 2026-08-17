@@ -1,0 +1,143 @@
+.tableFooterWrapper {
+  padding: 0 28px;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+}
+
+.tableFooterPartnerWrapper {
+  padding: 0 28px;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+}
+
+.tableFooter {
+  display: flex;
+  padding: 6px;
+  justify-content: space-between;
+  gap: 20px;
+  background: #EBEFF4;
+  border-radius: 5px;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.tableFooterShort {
+  gap: 10px;
+}
+
+.pagination {
+  min-width: 410px;
+  display: flex;
+  gap: 5px;
+  @media (max-width: 1024px) {
+    justify-content: space-between;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    min-width: max-content;
+  }
+
+  .paginationInfo {
+    padding: 3px 10px;
+    border-radius: 5px;
+    background: #ffffff;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+
+    span {
+      color: #868686;
+    }
+
+    select {
+      border: none;
+    }
+  }
+
+}
+
+
+.paginationControllers {
+  color: #868686;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #ffffff;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.limitSelect {
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+button.downloadBtn {
+  border-radius: 5px;
+  background: #ffffff;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  width: 100%;
+  max-width: 518px;
+  height: 35px;
+  color: #184F71;
+}
+
+button.downloadBtnDark {
+  background: #184F71;
+  color: #ffffff;
+}
+
+button.bigDownloadBtn {
+  max-width: 1045px;
+  background: #ffffff;
+  color: #000;
+}
+
+button.tableFooterAddBtn {
+  background: #184F71;
+  border-radius: 5px;
+  width: 41%;
+  max-width: 518px;
+  padding: 0 15px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+
+  span {
+    color: #ffffff;
+    border: none;
+  }
+
+  svg {
+    rect, path {
+      fill: #ffffff;
+      stroke: #ffffff;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    width: auto;
+  }
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+button.fullAddBtn {
+  width: 100%;
+}

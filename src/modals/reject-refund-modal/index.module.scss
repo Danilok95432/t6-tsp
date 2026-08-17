@@ -1,0 +1,55 @@
+div.refundModal {
+	width: 530px;
+
+	@media (max-width: 1440px) {
+		width: 70vw;
+	}
+
+	:global {
+		.modal-header {
+			background: #ffffff;
+			border-bottom: 1px solid #e1e1e1;
+
+			button svg rect {
+				fill: #000000;
+				stroke: #000000;
+			}
+
+			h3 {
+				font-size: 18px;
+				color: #000000;
+			}
+		}
+    .modal-content {
+      padding: 10px 30px 30px;
+    }
+	}
+
+	.refundForm {
+		flex-direction: column;
+		gap: 0px;
+    h4 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+		div.tableRow {
+			flex-direction: row;
+			gap: 30px;
+      margin-bottom: 24px;
+			.labelRow {
+        width: 150px;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 14px;
+        strong {
+          font-weight: 600;
+        }
+      }
+      .valueRow {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 14px;
+      }
+		}
+	}
+}

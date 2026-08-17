@@ -1,0 +1,140 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	min-width: 340px;
+	overflow-x: hidden;
+	font-size: 16px;
+	line-height: 1.37;
+	color: #000000;
+	position: relative;
+	width: 100vw;
+	@include opensans-regular;
+	background-color: #f2f5f8;
+
+	//зарезервированное место под ползунок
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 17px;
+		height: 100vh;
+		pointer-events: none;
+		visibility: hidden;
+	}
+}
+
+.react-datepicker__time-list {
+	scrollbar-width: none;
+	overflow-y: scroll !important;
+	&::-webkit-scrollbar {
+		width: 1px !important;
+	}
+}
+
+.react-datepicker__time-list::-webkit-scrollbar {
+	width: 1px !important;
+}
+
+#root {
+	height: 100vh;
+	flex-direction: column;
+	display: flex;
+}
+
+main {
+	flex-grow: 1;
+}
+
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+svg {
+	pointer-events: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	margin: 0;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+	background: none;
+	padding: 0;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+textarea {
+	resize: none;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1250px;
+	padding: 0 15px;
+}
+
+.col-item {
+	width: 340px;
+	min-width: 340px;
+}
+
+._hidden {
+	display: none;
+}
+
+._rotate {
+	transform: rotate(180deg);
+}

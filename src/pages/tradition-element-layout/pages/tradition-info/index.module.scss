@@ -1,0 +1,23 @@
+.traditionInfoPage {
+	h3 {
+		font-size: 25px;
+		margin-bottom: 20px;
+		font-weight: 700;
+	}
+}
+
+.traditionGalleryController {
+	width: 175px;
+	height: 131px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px dashed #e2e2e2;
+	border-radius: 5px;
+	transition: all 0.3s ease-in-out;
+}
+
+.traditionGalleryController:hover {
+	filter: invert(24%) sepia(37%) saturate(1237%) hue-rotate(164deg) brightness(62%) contrast(90%);
+	cursor: pointer;
+}

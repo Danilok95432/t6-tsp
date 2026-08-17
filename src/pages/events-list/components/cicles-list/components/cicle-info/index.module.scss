@@ -1,0 +1,15 @@
+div.eventProfilePage {
+  padding: 0 30px 55px 30px;
+	.titleInfo {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    padding: 0;
+  }
+	section:not(:last-child) {
+		margin-bottom: 30px;
+	}
+}
+.eventProfileForm {
+	max-width: 1167px;
+}

@@ -1,0 +1,174 @@
+.revenue-chart {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  .recharts-default-legend {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  .recharts-tooltip-wrapper {
+    font-size: 14px;
+  }
+
+  .recharts-cartesian-grid line {
+    stroke: #eee;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding: 48px 29px 20px 29px;
+}
+
+
+.revenueChart {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.chartContainer {
+  margin-bottom: 20px;
+}
+
+.customTooltip {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  .label {
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    color: #000000;
+    font-size: 14px;
+  }
+
+  .ticketsValue {
+    margin: 4px 0;
+    font-size: 12px;
+    color: #3877EE;
+  }
+
+  .returnsValue {
+    margin: 4px 0;
+    font-size: 12px;
+    color: #EF5DA8;
+  }
+}
+
+// Стили для осей графика
+.cartesianGrid {
+  stroke: #f0f0f0;
+}
+
+.xAxis {
+  .recharts-x-axis {
+    .recharts-cartesian-axis-tick {
+      text {
+        fill: #666;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.yAxis {
+  .recharts-y-axis {
+    .recharts-cartesian-axis-tick {
+      text {
+        fill: #666;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// Стили для легенды
+.legendText {
+  color: #333;
+  font-size: 12px;
+}
+
+// Информационная панель
+.chartInfo {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.colorDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.ticketsDot {
+  background-color: #3877EE;
+}
+
+.returnsDot {
+  background-color: #EF5DA8;
+}
+
+// Глобальные стили для Recharts (через :global)
+:global {
+  .recharts-cartesian-grid-horizontal line {
+    stroke: #f0f0f0;
+  }
+  
+  .recharts-cartesian-axis-line {
+    stroke: none;
+  }
+  
+  .recharts-cartesian-axis-tick-line {
+    stroke: none;
+  }
+  
+  .recharts-legend-wrapper {
+    .recharts-legend-item {
+      .recharts-legend-item-text {
+        color: #333;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+  .revenueChart {
+    padding: 16px;
+  }
+  
+  .chartInfo {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .title {
+    font-size: 16px;
+  }
+}

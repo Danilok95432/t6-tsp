@@ -1,0 +1,73 @@
+.salePage {
+  .headRow {
+    gap: 20px;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-bottom: 30px;
+    .headElement {
+      width: 33%;
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 24px;
+      box-shadow: 0 0 10px 0 rgba(40, 106, 145, 0.25);
+      border-radius: 3px;
+      .title {
+        font-size: 20px;
+        flex-direction: column;
+        gap: 5px;
+        p:last-child {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+	.ticketsRow {
+		flex-direction: column;
+    gap: 8px;
+		.ticketsTotalInfo {
+			gap: 24px;
+			align-items: center;
+			background: #f4f9fb;
+			padding: 8px 16px;
+      margin-bottom: 7px;
+			.totalInfo {
+				font-size: 16px;
+			}
+		}
+		.ticketsTable {
+			grid-template-columns:
+				minmax(107px, 1fr)
+				minmax(107px, 1fr)
+				minmax(107px, 1fr)
+				minmax(107px, 1fr)
+				minmax(107px, 1fr)
+				minmax(107px, 1fr)
+				minmax(107px, 1fr);
+		}
+		.center {
+			margin-left: 40px;
+		}
+	}
+	.salesRow {
+		flex-direction: column;
+    gap: 8px;
+		max-width: 645px;
+		.totalInfo {
+			background: #f4f9fb;
+			padding: 8px 16px;
+			font-size: 16px;
+      margin-bottom: 7px;
+		}
+		.salesTable {
+			max-width: 645px;
+			grid-template-columns:
+				minmax(215px, 215px)
+				minmax(215px, 215px)
+				minmax(215px, 1fr);
+		}
+		.center {
+			margin-left: 25px;
+		}
+	}
+}

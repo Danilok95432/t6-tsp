@@ -1,0 +1,19 @@
+.onePartnerPage {
+	display: flex;
+	flex-direction: column;
+	min-height: 800px;
+	align-items: start;
+	padding: 35px 30px 50px 30px;
+
+	h3 {
+		font-size: 25px;
+		font-weight: 700;
+		line-height: 1.2;
+		color: #000;
+		margin: 0 0 20px 0;
+	}
+}
+
+.containerEventPartners {
+	flex-grow: 1;
+}

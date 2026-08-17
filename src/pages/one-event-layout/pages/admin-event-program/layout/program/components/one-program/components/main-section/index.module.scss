@@ -1,0 +1,29 @@
+.inputWrapper {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	width: 100%;
+	.checkbox {
+		margin-bottom: 20px;
+	}
+}
+
+.tooltip {
+	margin-top: 25px;
+}
+
+.tooltipSpecial {
+  margin-top: 30px;
+}
+
+.tooltip_type {
+	margin-top: -15px;
+}
+
+.tooltip_teg {
+	margin-top: 27px;
+}
+
+.typeLevelWrapper {
+	width: 100%;
+}

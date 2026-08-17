@@ -1,0 +1,35 @@
+.inputWrapper {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	width: 100%;
+}
+
+.controlledFormElement {
+	max-width: 1140px;
+}
+
+.marginBottom {
+	margin-bottom: 20px;
+}
+
+.gridRow {
+	width: 100%;
+	grid-template-columns: repeat(3, minmax(calc(1140px / 3 - 20px), calc(1140px / 3 - 7px)));
+}
+
+.tooltip {
+	margin-top: 10px;
+}
+
+.tooltip_type {
+	margin-top: -15px;
+}
+
+.tooltip_teg {
+	margin-top: 27px;
+}
+
+.typeLevelWrapper {
+	width: 100%;
+}

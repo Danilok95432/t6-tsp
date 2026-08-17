@@ -1,0 +1,102 @@
+.mainSection {
+	margin-bottom: 30px;
+	max-width: 1169px;
+	h2 {
+		margin-bottom: 15px;
+		font-size: 18px;
+	}
+	.shortInput {
+		max-width: 80px;
+	}
+
+	.groupInputsStart {
+		gap: 15px;
+		align-items: start;
+		flex-wrap: nowrap;
+		width: 100%;
+		margin-top: 40px;
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+		.phoneSpan {
+			@media (max-width: 768px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.inputwithLabel {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		margin-bottom: 15px;
+		@media (max-width: 768px) {
+			margin-bottom: 0px;
+		}
+		.warningMessage {
+			color: #e30613;
+			font-weight: 500;
+			font-size: 15px;
+		}
+		.noMargin {
+			margin-bottom: 0;
+		}
+		span {
+			color: #707070;
+			font-size: 15px;
+		}
+	}
+	.inputWrapper {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		width: 100%;
+		margin-bottom: 25px;
+	}
+}
+
+.inputWrapperShort {
+	max-width: 600px;
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	width: 100%;
+	margin-bottom: 25px;
+	position: relative;
+}
+
+div.flexRow {
+	.phoneInput {
+		max-width: 200px;
+	}
+	.checkbox {
+		margin-top: 25px;
+	}
+}
+
+.tooltip {
+	margin-top: 27px;
+}
+
+.tooltipSpecial {
+	margin-top: 30px;
+}
+
+.tooltip_type {
+	margin-top: -15px;
+}
+
+.tooltip_teg {
+	margin-top: 27px;
+}
+
+.typeLevelWrapper {
+	width: 100%;
+}
+
+.tooltip_login {
+	position: absolute;
+	top: 0;
+	left: 250px;
+}

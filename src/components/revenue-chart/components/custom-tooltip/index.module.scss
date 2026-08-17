@@ -1,0 +1,27 @@
+.customTooltip {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	gap: 4px;
+	background: #ffffff;
+  box-shadow: 0 0 10px 0 rgba(40, 106, 145, 0.25);
+	border-radius: 3px;
+	position: relative;
+	.element {
+		font-size: 14px;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 25%;
+		left: 0px;
+		transform: translateX(-50%);
+		width: 0;
+		height: 0;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		border-right: 20px solid #fff;
+	}
+}

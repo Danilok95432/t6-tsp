@@ -1,0 +1,174 @@
+.tabNavList {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 30px;
+	@media (max-width: 1024px) {
+		flex-direction: column;
+	}
+
+	.navItem {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+
+		svg {
+			display: block;
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	li {
+		&:hover {
+			a {
+				color: #ffffff;
+				border-color: #ffffff;
+			}
+		}
+
+		a {
+			display: inline-block;
+			color: #6ff5fe;
+			font-size: 16px;
+			border-bottom: 1px dotted #6ff5fe;
+			font-weight: 600;
+		}
+	}
+
+	.activeLink {
+		color: #ffffff;
+		border: none;
+		pointer-events: none;
+	}
+}
+
+.subtabList {
+	display: flex;
+	gap: 25px;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: 23px;
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	li {
+		a {
+			text-decoration-style: dotted;
+			font-size: 18px;
+			font-weight: 600;
+			color: #113770;
+			text-decoration: underline;
+		}
+
+		.activeLink {
+			color: #000000;
+			pointer-events: none;
+			text-decoration: none;
+		}
+	}
+}
+
+.visitorTabList {
+	display: flex;
+	gap: 35px;
+	flex-wrap: wrap;
+	align-items: center;
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	li {
+		a {
+			font-size: 16px;
+			font-weight: 600;
+			color: #000000;
+			text-decoration: overline 3px #e6e8eb;
+		}
+
+		.activeLink {
+			font-weight: 600;
+			color: #00becb;
+			pointer-events: none;
+			text-decoration: overline 3px #00d4e3;
+		}
+	}
+}
+
+.expressTabList {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-bottom: 20px;
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.pass {
+		pointer-events: all;
+		a {
+			background: #00bdcb;
+			color: #fff;
+			.subtitle {
+				text-decoration: underline #fff;
+			}
+		}
+	}
+	li {
+		pointer-events: none;
+		.navRow {
+			width: 100%;
+			justify-content: space-between;
+			gap: 0;
+		}
+		.stepRow {
+			flex-direction: column;
+			gap: 5px;
+			.subtitle {
+				font-size: 18px;
+				font-weight: 600;
+			}
+			.title {
+				font-size: 14px;
+				font-weight: 400;
+			}
+		}
+
+		a {
+			width: 100%;
+			display: flex;
+			padding: 8px 12px;
+			background: #f5f7fa;
+			min-width: 180px;
+			border-radius: 5px;
+			color: #000000;
+		}
+
+		.activeLink {
+			border: 2px solid #00bdcb;
+			padding: 6px 12px;
+			background: #ffffff;
+			.subtitle {
+				font-size: 18px;
+				font-weight: 600;
+				color: #01a7b4;
+			}
+			.title {
+				font-size: 14px;
+				font-weight: 400;
+				color: #000;
+			}
+		}
+	}
+}

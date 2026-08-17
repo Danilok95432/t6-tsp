@@ -1,0 +1,21 @@
+.inputWrapper {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	width: 100%;
+  margin-bottom: 12px;
+}
+
+.tooltip_age {
+	margin-top: 30px;
+}
+
+.placeRequest {
+	font-size: 14px;
+	a {
+		font-weight: 600;
+		font-size: 14px;
+		color: #002c47;
+		text-decoration: underline;
+	}
+}

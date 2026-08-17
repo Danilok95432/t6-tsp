@@ -1,0 +1,54 @@
+.titleNewsForm {
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  padding: 0 28px;
+}
+
+.linkBack {
+  margin-left: 28px;
+}
+
+div.cont {
+  margin-bottom: 25px;
+}
+
+.ordersTable {
+  grid-template-columns:
+  minmax(45px, 45px)
+  minmax(120px, 120px)
+  minmax(160px, 160px)
+  minmax(470px, 470px)
+  minmax(115px, 115px)
+  minmax(115px, 115px)
+  minmax(115px, 1fr);
+  .checkBoxWrapperNews {
+    margin: 14px auto auto 25px;
+  }
+}
+
+.oneNewsContent {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  @media (max-width: 1760px) {
+    flex-direction: column-reverse;
+  }
+  .oneNewsContentLeft {
+    width: 100%;
+    flex-grow: 1;
+    max-width: 1140px;
+    margin-top: 5px;
+  }
+  .oneNewsContentRight {
+    width: 240px;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,71 @@
+.mainSection {
+  margin-bottom: 25px;
+  max-width: 750px;
+  .title {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+}
+
+.inputWrapper {
+	display: flex;
+  flex-direction: column;
+	width: 100%;
+  margin-bottom: 20px;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.formInputWrapper {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.inputWrapperShort {
+  max-width: 600px;
+  display: flex;
+	align-items: center;
+	column-gap: 10px;
+	width: 100%;
+  margin-bottom: 25px;
+	position: relative;
+}
+
+div.flexRow {
+	.phoneInput {
+		max-width: 200px;
+	}
+  .checkbox {
+    margin-top: 25px;
+  }
+}
+
+.tooltip {
+	margin-top: 27px;
+}
+
+.tooltipSpecial {
+  margin-top: 30px;
+}
+
+.tooltip_type {
+	margin-top: -15px;
+}
+
+.tooltip_teg {
+	margin-top: 27px;
+}
+
+.typeLevelWrapper {
+	width: 100%;
+}
+
+.tooltip_login {
+	position: absolute;
+	top: 0;
+	left: 250px;
+}

@@ -1,0 +1,16 @@
+.pagination {
+    padding: 20px 0;
+    display: flex;
+
+    li {
+        padding: 6px 9px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    .activeCount {
+        border-radius: 3px;
+        background-color: #DE0008;
+        color: #FFF;
+    }
+}
+

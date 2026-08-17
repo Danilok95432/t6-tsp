@@ -1,0 +1,22 @@
+div.eventPassPage {
+  h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .link {
+    color: #002C47;
+    font-weight: 600;
+    text-decoration: underline 1px solid #89C2E5;
+  }
+  .disc {
+    max-width: 830px;
+    font-size: 14px;
+    margin: 23px 0;
+    border-radius: 5px;
+  }
+  .btnsRow {
+    margin-top: 35px;
+    gap: 15px;
+    align-items: center;
+  }
+}

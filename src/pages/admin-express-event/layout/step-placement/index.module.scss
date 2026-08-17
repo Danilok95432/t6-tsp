@@ -1,0 +1,19 @@
+.stepPage {
+  h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    span {
+      color: #01A7B4;
+      font-size: 35px;
+    }
+  }
+  a {
+    color: #008E99;
+  }
+  .nextRow {
+    margin-top: 45px;
+    align-items: center;
+    gap: 30px;
+    font-size: 17px;
+  }
+}

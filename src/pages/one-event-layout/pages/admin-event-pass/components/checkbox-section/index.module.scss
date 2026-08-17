@@ -1,0 +1,36 @@
+div.checkBoxesRow {
+	gap: 50px;
+	div.labelsRow,
+	div.valuesRow {
+		flex-direction: column;
+		flex-wrap: nowrap;
+		gap: 30px;
+		.statusesRow {
+			gap: 15px;
+			flex-direction: column;
+			p {
+				font-size: 14px;
+				font-weight: 600;
+			}
+      .check {
+        max-width: 220px;
+      }
+		}
+    .specialRow {
+      gap: 54px;
+      align-items: center;
+      .link {
+        font-weight: 600;
+        color: #002C47;
+        text-decoration: underline 1px solid #89C2E5;
+      }
+    }
+	}
+	div.valuesRow {
+		.statusesRow {
+			p {
+				font-weight: normal;
+			}
+		}
+	}
+}

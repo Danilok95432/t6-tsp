@@ -1,0 +1,33 @@
+.titleSectionInner {
+	max-width: 1169px;
+	.inputWrapper {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		width: 100%;
+	}
+
+	.marginBottom {
+		margin-bottom: 20px;
+	}
+
+  .inputStart {
+    align-items: start;
+  }
+
+	.tooltip {
+		margin-top: 10px;
+	}
+
+	.tooltip_type {
+		margin-top: -15px;
+	}
+
+	.tooltip_teg {
+		margin-top: 30px;
+	}
+
+	.typeLevelWrapper {
+		width: 100%;
+	}
+}

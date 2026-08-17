@@ -1,0 +1,70 @@
+.reactDropzone {
+  label {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+}
+
+.dropzoneArea {
+  max-width: 630px;
+  width: 100%;
+  cursor: pointer;
+  padding: 12px 20px;
+  min-height: 60px;
+  border: 2px dashed #CCCCCC;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  &:hover {
+    border-color: #7BC1C6;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.1;
+    color: #868686;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    svg {
+      min-width: 20px;
+      height: 18px;
+    }
+  }
+
+  span {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+}
+
+.activeArea {
+  border-color: #018EA3;
+}
+
+// стили текстового варианта загрузки файлов
+
+.textFileUpload {
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+
+.warningMessage {
+  color: #F00000;
+  font-size: 14px;
+  line-height: 1;
+  padding-top: 5px;
+}

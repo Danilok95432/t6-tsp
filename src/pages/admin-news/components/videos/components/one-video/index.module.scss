@@ -1,0 +1,27 @@
+.titleVideoForm {
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  padding: 0 28px;
+}
+
+.oneVideoContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  .oneVideoContentLeft {
+    flex-grow: 1;
+    max-width: 1140px;
+    margin-top: 5px;
+  }
+  .oneVideoContentRight {
+    width: 240px;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,55 @@
+.searchRow {
+	grid-template-columns:
+		minmax(300px, 300px)
+		minmax(300px, 1fr)
+		minmax(300px, 300px);
+	@media (max-width: 1440px) {
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	}
+}
+
+.headRow {
+    gap: 20px;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px 29px 0 29px;
+    .headElement {
+      width: 24%;
+      padding: 16px 24px;
+      box-shadow: 0 0 10px 0 rgba(40, 106, 145, 0.25);
+      border: 1px solid #E1E1E1;
+      border-radius: 3px;
+      .blockEl {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .topEl {
+          width: 100%;
+          gap: 0;
+          justify-content: space-between;
+          padding-bottom: 15px;
+          border-bottom: 1px dotted #D0D0D0;
+        }
+        .bottomEl {
+          width: 100%;
+          gap: 5px;
+          align-items: center;
+          p:first-child {
+            font-weight: 600;
+          }
+        }
+      }
+      .title {
+        font-size: 14px;
+        flex-direction: column;
+        gap: 5px;
+        p:last-child {
+          font-weight: 600;
+          font-size: 20px;
+        }
+      }
+    }
+  }

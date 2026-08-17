@@ -1,0 +1,21 @@
+.infoSection {
+  max-width: 750px;
+  .titleRow {
+    align-items: start;
+    gap: 15px;
+    .autoFillBtn {
+      background: none;
+      border: none;
+      text-decoration: underline 1px solid #89C2E5;
+      color: #002C47;
+      font-size: 14px;
+      padding: 0;
+      height: max-content;
+      margin-top: 35px;
+    }
+  }
+  .sumRow {
+    gap: 10px;
+    align-items: center;
+  }
+}

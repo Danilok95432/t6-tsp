@@ -1,0 +1,16 @@
+div.eventRulesPage {
+	padding: 0 30px 55px;
+	background: #fff;
+	h3 {
+		font-size: 25px;
+		margin-bottom: 20px;
+		font-weight: 700;
+	}
+	section:not(:last-child) {
+		margin-bottom: 30px;
+	}
+	form {
+		margin-bottom: 40px;
+	}
+}
+

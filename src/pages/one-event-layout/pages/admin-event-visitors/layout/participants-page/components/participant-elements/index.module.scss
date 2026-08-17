@@ -1,0 +1,40 @@
+.searchRow {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.newsTable {
+  grid-template-columns:
+  minmax(250px, 1fr)
+  minmax(200px, 200px)
+  minmax(126px, 150px)
+  minmax(115px, 145px)
+  minmax(80px, 120px)
+  minmax(125px, 125px)
+  minmax(100px, 150px)
+  minmax(180px, 1fr);
+  .checkBoxWrapperNews {
+    margin: 14px auto auto 25px;
+  }
+}
+
+.filterInput {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #AFAFAF;
+  border-radius: 3px;
+}
+
+div._select {
+  padding: 0px 10px;
+  font-size: 14px;
+  border: 1px solid #AFAFAF;
+  border-radius: 3px;
+  max-height: 34px;
+  min-height: 34px;
+  min-width: 125px;
+}
+
+.eventNewsContainer {
+  position: relative;
+  min-height: 620px;
+}

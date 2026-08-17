@@ -1,0 +1,19 @@
+.searchRow {
+  width: 100%;
+}
+
+.newsTable {
+	grid-template-columns:
+		minmax(496px, 1fr)
+		minmax(496px, 1fr)
+		minmax(496px, 1fr)
+		minmax(50px, 1fr);
+	.checkBoxWrapperNews {
+		margin: 14px auto auto 25px;
+	}
+}
+
+.eventNewsContainer {
+	position: relative;
+	min-height: 620px;
+}

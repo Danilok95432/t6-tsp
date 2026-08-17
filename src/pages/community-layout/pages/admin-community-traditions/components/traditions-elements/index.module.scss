@@ -1,0 +1,32 @@
+.searchRow {
+	max-width: 90% !important;
+	grid-template-columns:
+		minmax(300px, 0.8fr)
+		minmax(50px, 0.1fr);
+	@media (max-width: 1200px) {
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	}
+}
+
+.traditionsTable {
+	grid-template-columns:
+		minmax(300px, 5.5fr)
+		minmax(130px, 0.6fr)
+		minmax(180px, 1.2fr)
+		minmax(50px, 0.2fr);
+
+	.cultureTableLink {
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			right: -15px;
+			top: 55%;
+			width: 9px;
+			height: 9px;
+			transform: translateY(-50%);
+			background: url('data:image/svg+xml,<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.31247 0.139724L2.71622 8.59303e-05C2.39935 -0.00528476 2.14156 0.241767 2.13082 0.553266C2.12545 0.870136 2.3725 1.12793 2.684 1.13867L6.95369 1.24071L0.165148 8.02925C-0.0550494 8.24945 -0.0550494 8.61465 0.165148 8.83485C0.385346 9.05505 0.750552 9.05505 0.97075 8.83485L7.75929 2.04631L7.86133 6.316C7.8667 6.63287 8.12986 6.87455 8.44673 6.86918C8.60248 6.86381 8.73675 6.80474 8.83879 6.70269C8.94621 6.59528 9.01066 6.4449 9.00528 6.28915L8.87102 0.698274C8.86565 0.392146 8.6186 0.145094 8.31247 0.139724Z" fill="%23002C47"/></svg>')
+				no-repeat;
+		}
+	}
+}

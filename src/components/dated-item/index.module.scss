@@ -1,0 +1,63 @@
+@import "src/assets/styles/vars";
+
+.datedItem {
+  &:not(:last-child) {
+    margin-bottom: 55px;
+  }
+}
+
+.titleMonth {
+  @include opensans-bold;
+  font-size: 16px;
+  margin-bottom: 23px;
+  text-transform: uppercase;
+  &:not(:first-child) {
+    margin-top: -23px;
+  }
+}
+
+.datedItemInner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.dateInfo {
+  color: #B7212E;
+  font-size: 16px;
+  min-width: 100px;
+}
+
+.datedItemContent {
+  max-width: 790px;
+  h5 {
+    @include opensans-bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #000000;
+  }
+
+  p {
+    color: #000000;
+    font-size: 16px;
+    @include opensans-regular;
+  }
+}
+
+
+.datedItemImg {
+  width: 185px;
+  min-width: 185px;
+  height: 138px;
+
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

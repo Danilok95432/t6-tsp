@@ -1,0 +1,41 @@
+.questionsPageContent {
+	display: flex;
+	flex-direction: column;
+
+	.questionTableWrapper {
+		flex-grow: 1;
+	}
+
+	.table-title {
+		font-size: 25px;
+		padding-inline: 30px;
+		margin-bottom: 20px;
+		font-weight: 700;
+	}
+
+	.questionTable {
+		grid-template-columns:
+			minmax(200px, 3fr)
+			minmax(50px, 0.2fr);
+	}
+
+	.questionTableFooter {
+		padding: 0 28px;
+		position: absolute;
+		bottom: 94px;
+		left: 0;
+		width: 100%;
+
+		@media (width < 767px) {
+			bottom: 70px;
+		}
+	}
+
+	.questionsPageLinks {
+		padding-left: 30px;
+
+		&:not(:first-child) {
+			margin-bottom: 0px;
+		}
+	}
+}

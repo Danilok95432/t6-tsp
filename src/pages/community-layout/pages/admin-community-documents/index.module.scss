@@ -1,0 +1,32 @@
+.versionInput {
+  max-width: 200px;
+}
+
+.communityDocTextarea {
+  label textarea {
+    height: 100px;
+  }
+}
+
+.docRemoveBtn {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 12px;
+  top: 12px;
+}
+
+.docsBlockItem {
+  position: relative;
+  background: #f4f7fa;
+  border: 1px dashed #98a5a3;
+  border-radius: 5px;
+  padding: 10px 24px 20px 24px;
+  margin-bottom: 15px;
+
+  h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+}

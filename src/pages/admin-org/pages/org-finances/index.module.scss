@@ -1,0 +1,18 @@
+.adminTitleTab {
+	h2 {
+		font-size: 25px;
+		margin-bottom: 20px;
+	}
+	p {
+		font-size: 16px;
+	}
+}
+
+div.headRow {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #d3d3d3;
+}

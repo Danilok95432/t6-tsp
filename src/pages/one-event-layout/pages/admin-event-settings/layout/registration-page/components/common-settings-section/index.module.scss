@@ -1,0 +1,44 @@
+.text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.checkBox {
+  p {
+    font-size: 14px;
+  }
+}
+
+div.customCheck {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+  .inputCustom {
+    label {
+      width: 49px;
+      height: 35px;
+    }
+  }
+  .customLabel {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+}
+
+a.link {
+  text-decoration: underline 1px solid black;
+  color: black;
+}
+
+.guestInput {
+  max-width: 250px;
+}
+
+div.settingElem {
+  flex-direction: column;
+  gap: 0;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

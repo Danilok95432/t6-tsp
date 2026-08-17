@@ -1,0 +1,30 @@
+div.saleSection {
+	gap: 16px;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	padding: 0 0 24px 0;
+	margin: 0 0 15px;
+	border-bottom: 1px solid #e1e1e1;
+	h3 {
+		margin-bottom: 0px;
+	}
+	.checkbox {
+		font-size: 14px;
+	}
+	div.customCheck {
+		display: flex;
+		gap: 0px;
+		align-items: center;
+		.inputCustom {
+			label {
+				width: 49px;
+				height: 35px;
+			}
+		}
+		.customLabel {
+			display: flex;
+			gap: 8px;
+			align-items: center;
+		}
+	}
+}

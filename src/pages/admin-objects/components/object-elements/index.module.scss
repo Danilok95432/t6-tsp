@@ -1,0 +1,18 @@
+.searchRow {
+  grid-template-columns: 
+  minmax(350px, 1.7fr)
+  minmax(300px, 1.5fr)
+  minmax(170px, 0.7fr)
+  minmax(50px, 0.2fr);
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+.objectTable {
+  grid-template-columns:
+  minmax(350px, 1.8fr)
+  minmax(300px, 1.5fr)
+  minmax(139px, 0.8fr)
+  minmax(50px, 0.2fr)
+}

@@ -1,0 +1,39 @@
+.logoLink {
+  height: 26px;
+}
+
+.adminHeader {
+  padding: 13px 0 20px;
+  border-bottom: 1px solid rgba(#ffffff, 0.2);
+  background: linear-gradient(270deg, rgba(0, 166, 156, 0.50) 4.78%, #286A91 39.47%);
+}
+
+.adminHeaderContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 62px;
+}
+
+.adminSearchInput {
+  width: 630px;
+  @media (max-width: 768px) {
+    width: 45%;
+  }
+
+  svg {
+    right: auto;
+    left: 10px;
+  }
+
+  input {
+    background: rgba(#ffffff,0.2);
+    outline-color: transparent;
+    border-radius: 3px;
+    padding-left: 30px;
+    &::placeholder {
+      color: #10537C;
+    }
+  }
+}
+

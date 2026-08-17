@@ -1,0 +1,25 @@
+div.linkRowInputs {
+  flex-grow: 1;
+  grid-template: auto / 1fr 1fr;
+  align-items: center;
+  margin-top: 20px;
+
+  @media (max-width: 768px) {
+    grid-template: auto / 1fr;
+  }
+}
+
+.inputWrapper {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	width: 100%;
+  margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.checkbox {
+  font-size: 14px;
+}

@@ -1,0 +1,38 @@
+div.mainSection {
+	gap: 30px;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	padding: 0 0 15px;
+	border-bottom: 1px solid #e1e1e1;
+	.ticketsRow {
+		align-items: center;
+		width: 100%;
+	}
+	.commerceRow {
+		gap: 30px;
+		align-items: end;
+		div.customCheck {
+			display: flex;
+			gap: 0px;
+			align-items: center;
+			.inputCustom {
+				label {
+					width: 49px;
+					height: 35px;
+				}
+			}
+			.customLabel {
+				display: flex;
+				gap: 8px;
+				align-items: center;
+			}
+		}
+	}
+	.priceRow {
+		gap: 10px;
+		align-items: end;
+		p {
+			margin-bottom: 10px;
+		}
+	}
+}

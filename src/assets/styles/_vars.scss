@@ -1,0 +1,52 @@
+$white: #ffffff;
+$black: #000000;
+
+
+@mixin montserrat-regular {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+
+@mixin opensans-light{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+@mixin opensans-regular{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+@mixin opensans-medium{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+@mixin opensans-semi {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+@mixin opensans-bold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+@mixin ptsans-regular {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+}
+
+@mixin ptsans-bold {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+}
+
+@mixin ptsans-italic {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+

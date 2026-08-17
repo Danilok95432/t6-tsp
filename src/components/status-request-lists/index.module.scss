@@ -1,0 +1,23 @@
+.statusRequest {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pending {
+  color: #E67B00;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ok {
+  color: #026E5B;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rejected {
+  color: #D9001B;
+  font-size: 14px;
+  font-weight: 600;
+}

@@ -1,0 +1,143 @@
+.customTable {
+  display: grid;
+  min-width: 100%;
+  width: auto;
+  padding-bottom: 150px;
+
+  border: none;
+  border-collapse: collapse;
+  overflow-x: auto;
+
+  .sortTh {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    p {
+      text-decoration: underline 1px dotted;
+    }
+    .vector {
+      transition: all .3s ease-in-out;
+    }
+    .activeVector {
+      transform: rotate(180deg);
+    }
+  }
+
+  thead,
+  tbody,
+  tr {
+    display: contents;
+  }
+
+  thead {
+    th {
+      border-bottom: 1px solid #E1E1E1;
+    }
+  }
+
+  tr:not(:last-child) {
+    td {
+      border-bottom: 1px solid #E1E1E1;
+    }
+  }
+
+  tr {
+    cursor: pointer;
+
+    &:hover {
+      td {
+        background: #F5F7FA;
+      }
+    }
+
+    &:nth-last-child(1), &:nth-last-child(2) {
+      :global {
+        .row-controllers {
+          top: auto;
+          bottom: 100%;
+        }
+      }
+    }
+  }
+
+
+  th {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+    display: flex;
+    flex-grow: 1;
+    background: #F5F7FA;
+    align-items: center;
+    min-height: 47px;
+    padding: 0 5px;
+    text-align: left;
+
+    &:first-child {
+      padding-left: 28px;
+    }
+  }
+
+  td {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    min-height: 47px;
+    font-size: 14px;
+    padding: 0 5px;
+    line-height: 1.2;
+    transition: all .3s;
+
+
+    &:first-child {
+      padding-left: 28px;
+    }
+
+    a {
+      margin: 0;
+    }
+
+    :global {
+      .hidden-cell, .hidden-cell-icon {
+        color: #868686;
+      }
+
+      .hidden-cell-icon {
+        padding-left: 20px;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          background: url('data:image/svg+xml,<svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.3369 0.176225C14.1072 -0.0535334 13.7212 -0.0535334 13.4914 0.176225L11.8647 1.80291C10.5597 1.06769 9.26386 0.681694 7.99559 0.681694C3.8048 0.681694 0.514659 4.75301 0.082713 5.50662C-0.027571 5.69043 -0.027571 5.92019 0.082713 6.10399C0.468707 6.7657 1.93916 8.51186 3.97023 9.70661L2.4722 11.2046C2.24244 11.4344 2.24244 11.8204 2.4722 12.0501C2.59168 12.1696 2.73872 12.2248 2.89496 12.2248C3.05119 12.2248 3.19824 12.1696 3.31771 12.0501L14.3369 1.02174C14.5667 0.791978 14.5667 0.405984 14.3369 0.176225ZM1.32341 5.80071C2.10459 4.7622 4.78817 1.87644 8.00478 1.87644C8.96058 1.87644 9.96233 2.16134 10.9825 2.69438L9.95314 3.7237C9.43848 3.20904 8.74001 2.89657 7.99559 2.89657C6.47 2.89657 5.22011 4.13726 5.22011 5.67205C5.22011 6.41646 5.53258 7.11493 6.04724 7.62959L4.83412 8.84271C3.1431 7.92368 1.83807 6.52675 1.31422 5.81909L1.32341 5.80071ZM6.90194 6.77489C6.60785 6.4808 6.42405 6.0948 6.42405 5.66286C6.42405 4.78977 7.1317 4.08212 8.00478 4.08212C8.43673 4.08212 8.82272 4.26593 9.11682 4.56002L6.90194 6.77489Z" fill="%23868686"/><path d="M15.9185 5.49582C15.6703 5.07307 14.9994 4.24594 14.0988 3.428C13.8598 3.20743 13.4738 3.22581 13.2533 3.46476C13.0327 3.7129 13.0511 4.0897 13.29 4.31027C13.9242 4.88926 14.4021 5.43149 14.6686 5.7991C13.8782 6.83761 11.2038 9.72338 7.9872 9.72338C7.77582 9.72338 7.56444 9.71419 7.35306 9.68662C7.0314 9.64985 6.72812 9.87961 6.69136 10.2105C6.6546 10.5413 6.88436 10.8354 7.21521 10.8722C7.47254 10.8997 7.72987 10.9181 7.99639 10.9181C12.1964 10.9181 15.4865 6.8468 15.9185 6.09319C16.0287 5.90939 16.0287 5.67963 15.9185 5.49582Z" fill="%23868686"/></svg>') no-repeat;
+          width: 16px;
+          height: 13px;
+        }
+      }
+    }
+  }
+
+  a {
+    color: #015DB9;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+._short {
+
+  tr {
+
+    &:nth-last-child(1), &:nth-last-child(2) {
+      :global {
+        .row-controllers {
+          top: 100%;
+          bottom: auto;
+        }
+      }
+    }
+  }
+}
