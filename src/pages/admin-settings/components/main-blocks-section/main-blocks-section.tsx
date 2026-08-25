@@ -9,43 +9,43 @@ export const MainBlocksSection = () => {
 			<h2>Блоки главной страницы</h2>
 			<ControlledCheckbox
 				name='use_promo'
-				label='Показать блок «Промо» (главное изображение с надписью)'
+				label='Показать блок «Промо» (главный рекламный блок)'
 				$margin='0 0 20px 0'
 				type='checkbox'
 			/>
 			<ControlledCheckbox
-				name='use_awards'
-				label='Показать блок «Награды»'
+				name='use_big'
+				label='Показать блок «Для крупного и среднего бизнеса»'
 				$margin='0 0 20px 0'
 				type='checkbox'
 			/>
 			<ControlledCheckbox
-				name='use_mainslider'
-				label='Показать блок «Главный слайдер» (слайдер с одним товаром на страницу)'
+				name='use_small'
+				label='Показать блок «Для малого бизнеса и частных клиентов»'
 				$margin='0 0 20px 0'
 				type='checkbox'
 			/>
 			<ControlledCheckbox
-				name='use_best'
-				label='Показать блок «Наше лучшее» (слайдер с несколькими товарами)'
+				name='use_projects'
+				label='Показать блок «Проекты» (слайдер с несколькими проектами)'
 				$margin='0 0 20px 0'
 				type='checkbox'
 			/>
 			<ControlledCheckbox
-				name='use_adv'
-				label='Показать блок «Реклама»'
+				name='use_prof'
+				label='Показать блок «Профессионалы»'
 				$margin='0 0 20px 0'
 				type='checkbox'
 			/>
 			<ControlledCheckbox
-				name='use_catalog'
-				label='Показать блок «Каталог продукции» (товарные группы со ссылками на товары)'
+				name='use_docs'
+				label='Показать блок «Документы»'
 				$margin='0 0 20px 0'
 				type='checkbox'
 			/>
 			<ControlledCheckbox
-				name='use_reviews'
-				label='Показать блок «Отзывы покупателей»'
+				name='use_contacts'
+				label='Показать блок «Контакты и карта»'
 				type='checkbox'
 				$margin='0 0 20px 0'
 			/>

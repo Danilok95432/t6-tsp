@@ -27,6 +27,7 @@ import { catalogApi } from './catalog/catalog.api'
 import { tradingApi } from './trading/trading.api'
 import { customerApi } from './customers/customers.api'
 import { marketingApi } from './marketing/marketing.api'
+import { solutionsApi } from './solutions/solutions.api'
 
 export const store = configureStore({
 	reducer: {
@@ -53,6 +54,7 @@ export const store = configureStore({
 		[tradingApi.reducerPath]: tradingApi.reducer,
 		[customerApi.reducerPath]: customerApi.reducer,
 		[marketingApi.reducerPath]: marketingApi.reducer,
+		[solutionsApi.reducerPath]: solutionsApi.reducer,
 	},
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware({ serializableCheck: false }).concat(
@@ -76,6 +78,7 @@ export const store = configureStore({
 			tradingApi.middleware,
 			customerApi.middleware,
 			marketingApi.middleware,
+			solutionsApi.middleware,
 			rtkQueryErrorLogger,
 		),
 })

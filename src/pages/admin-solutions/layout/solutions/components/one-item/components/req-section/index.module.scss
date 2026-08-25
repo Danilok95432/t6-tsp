@@ -1,0 +1,55 @@
+section.mainSection {
+	margin-bottom: 36px;
+	max-width: 1140px;
+	.img {
+		label {
+			font-size: 14px;
+		}
+	}
+	.toolsRow {
+		align-items: end;
+		gap: 12px;
+		margin: 0 0 20px 0;
+		.countTools {
+			max-width: 138px;
+		}
+		.tools {
+			max-width: 565px;
+		}
+		.addBtn {
+			padding: 0 24px;
+			margin: 0;
+			height: 34.1px;
+			font-size: 14px;
+			border-radius: 3px;
+			pointer-events: initial;
+			background: #184f71;
+			color: #ffffff;
+			box-shadow: none;
+			border: none;
+			text-decoration: none;
+			font-weight: 600;
+			cursor: pointer;
+			display: inline-flex;
+			align-items: center;
+			gap: 5px;
+			justify-content: center;
+			transition: all 0.3s;
+			&:hover {
+				background: #018EA3;
+			}
+		}
+	}
+	.area {
+		margin-bottom: 20px;
+	}
+	h2.title {
+		border-bottom: 0 !important;
+		padding: 0 !important;
+		margin-bottom: 12px !important;
+	}
+	.weightGroup {
+		max-width: 170px;
+	}
+}
+

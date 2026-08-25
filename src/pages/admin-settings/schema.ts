@@ -1,11 +1,11 @@
 export type SettingsInputs = {
 	use_promo: boolean
-	use_awards: boolean
-	use_mainslider: boolean
-	use_best: boolean
-	use_adv: boolean
-	use_catalog: boolean
-	use_reviews: boolean
+	use_big: boolean
+	use_small: boolean
+	use_projects: boolean
+	use_prof: boolean
+	use_docs: boolean
+	use_contacts: boolean
 	contact_address: string
 	contact_telphone: string
 	contact_email: string
@@ -17,10 +17,10 @@ export type SettingsInputs = {
 
 export const defaultMainBlocksValues = {
 	use_promo: false,
-	use_awards: false,
-	use_mainslider: false,
-	use_best: false,
-	use_adv: false,
-	use_catalog: false,
-	use_reviews: false,
+	use_big: false,
+	use_small: false,
+	use_projects: false,
+	use_prof: false,
+	use_docs: false,
+	use_contacts: false,
 }

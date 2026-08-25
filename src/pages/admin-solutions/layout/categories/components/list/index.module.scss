@@ -1,0 +1,24 @@
+.searchRow {
+  grid-template-columns: 
+  minmax(750px, 0.5fr);
+}
+
+.solutionsTable {
+  grid-template-columns:
+  minmax(80px, 80px)
+  minmax(438px, 438px)
+  minmax(697px, 697px)
+  minmax(122px, 122px)
+  minmax(158px, 158px)
+  minmax(50px, 1fr);
+  .checkBoxWrapperNews {
+    margin: 14px auto auto 25px;
+  }
+}
+
+.titleNewsTable {
+  max-width: 750px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}

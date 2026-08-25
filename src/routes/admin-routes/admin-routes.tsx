@@ -165,11 +165,42 @@ import { OneReview } from 'src/pages/admin-marketing/layout/reviews/one-item/rev
 import { DeletedOrdersPage } from 'src/pages/admin-trading/layout/deleted-orders-page/deleted-order-page'
 import { DeletedOrdersList } from 'src/pages/admin-trading/layout/deleted-orders-page/components/list/orders-list'
 import { DeletedOneOrder } from 'src/pages/admin-trading/layout/deleted-orders-page/components/one-item/order'
+import { AdminSolutionsLayout } from 'src/pages/admin-solutions/admin-solutions-layout'
+import { SolutionsPage } from 'src/pages/admin-solutions/layout/solutions/solutions-page'
+import { SolutionsList } from 'src/pages/admin-solutions/layout/solutions/components/list/solutions-list'
+import { OneSolution } from 'src/pages/admin-solutions/layout/solutions/components/one-item/solution'
+import { SolCategoriesPage } from 'src/pages/admin-solutions/layout/categories/categories-page'
+import { SolCategoriesList } from 'src/pages/admin-solutions/layout/categories/components/list/categories-list'
+import { OneSolCategory } from 'src/pages/admin-solutions/layout/categories/components/one-item/sol-category'
+import { LevelsPage } from 'src/pages/admin-solutions/layout/levels/levels-page'
+import { SolLevelsist } from 'src/pages/admin-solutions/layout/levels/components/list/levels-list'
+import { OneSolLevel } from 'src/pages/admin-solutions/layout/levels/components/one-item/sol-level'
+import { ProjectsPage } from 'src/pages/admin-solutions/layout/projects/projects-page'
+import { SolProjectsList } from 'src/pages/admin-solutions/layout/projects/components/list/projects-list'
+import { OneSolProject } from 'src/pages/admin-solutions/layout/projects/components/one-item/sol-project'
 
 export const AdminRoutes: FC = () => {
 	return (
 		<Routes>
 			<Route path='/' element={<AdminLayout />}>
+				<Route path={AdminRoute.Solutions} element={<AdminSolutionsLayout />}>
+					<Route path={AdminRoute.SolutionsInfo} element={<SolutionsPage />}>
+						<Route index element={<SolutionsList />} />
+						<Route path=':id' element={<OneSolution />} />
+					</Route>
+					<Route path={AdminRoute.SolutionsCategories} element={<SolCategoriesPage />}>
+						<Route index element={<SolCategoriesList />} />
+						<Route path=':id' element={<OneSolCategory />} />
+					</Route>
+					<Route path={AdminRoute.SolutionsLevels} element={<LevelsPage />}>
+						<Route index element={<SolLevelsist />} />
+						<Route path=':id' element={<OneSolLevel />} />
+					</Route>
+					<Route path={AdminRoute.SolutionsProjects} element={<ProjectsPage />}>
+						<Route index element={<SolProjectsList />} />
+						<Route path=':id' element={<OneSolProject />} />
+					</Route>
+				</Route>
 				<Route path={AdminRoute.Catalog} element={<AdminCatalogLayout />}>
 					<Route path={AdminRoute.CatalogTypes} element={<TypesPage />}>
 						<Route index element={<TypesList />} />

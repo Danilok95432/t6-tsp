@@ -7,8 +7,14 @@ import { AdminPartnersIconSvg } from 'src/UI/icons/adminPartnersIconSvg'
 import { AdminOrgIconSVG } from 'src/UI/icons/adminOrgIncoSVG'
 import { AdminGuestsIconSVG } from 'src/UI/icons/adminGuestsIconSVG'
 import { AdminStatisticIconSVG } from 'src/UI/icons/adminStatisticIconSVG'
+import { AdminSolutionsSVG } from 'src/UI/icons/adminSolutionsSVG'
 
 export const adminMenuItems: NavigationItem[] = [
+	{
+		title: 'Решения',
+		icon: <AdminSolutionsSVG />,
+		link: 'solutions/sol-info',
+	},
 	{
 		title: 'Каталог',
 		icon: <AdminPartnersIconSvg />,
