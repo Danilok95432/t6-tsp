@@ -6,10 +6,32 @@ section.mainSection {
 			font-size: 14px;
 		}
 	}
+	.equipList {
+		display: flex;
+		flex-direction: row;
+		gap: 12px;
+		align-items: center;
+		margin-bottom: 16px;
+		.listItem {
+			background: #ECF2F9;
+			display: flex;
+			flex-direction: row;
+			gap: 8px;
+			align-items: center;
+			padding: 5px 10px;
+			border-radius: 3px;
+		}
+		.removeBtn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+	}
 	.toolsRow {
 		align-items: end;
 		gap: 12px;
-		margin: 0 0 20px 0;
+		margin: 0 0 36px 0;
 		.countTools {
 			max-width: 138px;
 		}

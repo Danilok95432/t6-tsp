@@ -23,6 +23,7 @@ import {
 	useGetSolutionInfoQuery,
 	useSaveSolutionInfoMutation,
 } from 'src/store/solutions/solutions.api'
+import { MediaSection } from './components/media-section/media-section'
 
 export const OneSolCategory = () => {
 	const { id = '0' } = useParams()
@@ -44,7 +45,6 @@ export const OneSolCategory = () => {
 		const formData = new FormData()
 		formData.append('id', id)
 		formData.append('title', data.title)
-		formData.append('main_button', data.main_button ?? '')
 		formData.append('short', data.short ?? '')
 		formData.append('full', data.full ?? '')
 		formData.append(
@@ -60,7 +60,6 @@ export const OneSolCategory = () => {
 		formData.append('seo_keywords', data.seo_keywords ?? '')
 		formData.append('seo_virtual', data.seo_virtual ?? '')
 		formData.append('hidden', booleanToNumberString(data.hidden))
-		formData.append('use_main', booleanToNumberString(data.use_main))
 		const res = await saveCategoryInfo(formData)
 		if (res) {
 			markAsSent(true)
@@ -91,6 +90,7 @@ export const OneSolCategory = () => {
 						<div className={styles.oneNewsContent}>
 							<div className={styles.oneNewsContentLeft}>
 								<MainSection />
+								<MediaSection />
 								<SeoSection />
 							</div>
 							<div className={styles.oneNewsContentRight}>
@@ -108,23 +108,6 @@ export const OneSolCategory = () => {
 										<>
 											<SwitchedShowSvg />
 											Показать
-										</>
-									}
-								/>
-								<SwitchedRadioBtns
-									name='use_main'
-									label='Показать на главной'
-									$variant='switcher'
-									contentRadio1={
-										<>
-											<SwitchedShowSvg />
-											Показать
-										</>
-									}
-									contentRadio2={
-										<>
-											<SwitchedHiddenSvg />
-											Спрятать
 										</>
 									}
 								/>

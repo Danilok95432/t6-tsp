@@ -39,6 +39,9 @@ export const OneSolution = () => {
 		resolver: yupResolver(oneSolutionSchema),
 		defaultValues: {
 			hidden: false,
+			equipmentList: [],
+			tools: null, // или ''
+			count: '',
 		},
 	})
 	const { isSent, markAsSent } = useIsSent(methods.control)

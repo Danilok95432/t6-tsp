@@ -4,9 +4,6 @@ import { type FC } from 'react'
 import { AdminSection } from 'src/components/admin-section/admin-section'
 import styles from './index.module.scss'
 import { ReactDropzone } from 'src/components/react-dropzone/react-dropzone'
-import { ReactDropzoneFiles } from 'src/components/react-dropzone-files/react-dropzone-files'
-import { RemoveFileSvg } from 'src/UI/icons/removeFileSVG'
-import { AddButton } from 'src/UI/AddButton/AddButton'
 import { type ImageItemWithText } from 'src/types/photos'
 import { type FileItem } from 'src/types/files'
 
@@ -29,7 +26,7 @@ export const MediaSection: FC<MainSectionProps> = ({
 		<AdminSection
 			className={styles.mainSection}
 			isBlock={false}
-			titleText='Изображения решения. Первое в списке — основное'
+			titleText='Изображения уровня. Первое в списке — основное'
 			titleStyleClass={styles.title}
 		>
 			<ReactDropzone
@@ -76,7 +73,7 @@ export const MediaSection: FC<MainSectionProps> = ({
 					</AddButton>
 				}
 			/> */}
-			<h2 className={styles.subTitle}>Документы</h2>
+			{/* <h2 className={styles.subTitle}>Документы</h2>
 			<ReactDropzoneFiles
 				previewVariant='text'
 				variant='text'
@@ -92,7 +89,7 @@ export const MediaSection: FC<MainSectionProps> = ({
 				multiple
 				customUploadBtn={<AddButton>Добавить файл</AddButton>}
 				className={styles.img}
-			/>
+			/> */}
 		</AdminSection>
 	)
 }

@@ -2,6 +2,11 @@ import { type ImageItemWithText } from 'src/types/photos'
 import { type SelOption } from 'src/types/select'
 import * as yup from 'yup'
 
+export type EquipmentItem = {
+	name: string
+	quantity: number
+}
+
 export type OneSolutionInputs = {
 	title: string
 	use_main?: boolean
@@ -17,6 +22,9 @@ export type OneSolutionInputs = {
 	url?: string
 	hidden?: boolean
 	parent?: SelOption[] | string
+	equipmentList?: EquipmentItem[]
+	tools?: string | { label: string; value: string } | null
+	count?: number | string
 }
 
 export const oneSolutionSchema = yup.object().shape({

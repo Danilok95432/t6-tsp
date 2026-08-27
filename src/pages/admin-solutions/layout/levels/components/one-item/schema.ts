@@ -4,8 +4,6 @@ import * as yup from 'yup'
 
 export type OneSolCategoryInputs = {
 	title: string
-	use_main?: boolean
-	main_button?: string
 	short?: string
 	full?: string
 	img?: ImageItemWithText[]

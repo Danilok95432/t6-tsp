@@ -41,6 +41,7 @@ export const SolutionsList: FC = () => {
 	const tableTitles = [
 		'№',
 		'Название решения',
+		'Раздел решения',
 		'Описание решения',
 		'Стоимость оборудования',
 		'Стоимость монтажа',
@@ -56,6 +57,7 @@ export const SolutionsList: FC = () => {
 				cells: [
 					<p key='0'>{el.id}</p>,
 					<p key='1'>{el.name}</p>,
+					<p key='1'>{el.part}</p>,
 					<p key='2'>{el.desc}</p>,
 					<p key='3'>{el.sumItems}</p>,
 					<p key='4'>{el.sumWork}</p>,

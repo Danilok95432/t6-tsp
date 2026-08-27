@@ -7,6 +7,7 @@ export type SolutionInfoElement = {
 	totalSum: string
 	category: string
 	level: string
+	part: string
 }
 
 export type SolutionInfoResponse = {
