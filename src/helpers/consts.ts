@@ -40,5 +40,5 @@ export enum DisplayBreakpoints {
 
 export const BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:4020/api/v1'
 
-export const MAIN_PROD_URL = 'https://api.imperatorspb.ru/admin'
+export const MAIN_PROD_URL = 'https://api-tsr.npotau.ru/admin'
 export const DEV_URL = '/api'
