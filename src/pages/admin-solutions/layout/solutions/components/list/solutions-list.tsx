@@ -117,11 +117,11 @@ export const SolutionsList: FC = () => {
 				rowClickHandler={rowClickHandler}
 			/>
 			<TableFooter
-				totalElements={Number(data?.solutions.length)}
+				totalElements={Number(data?.solutions?.length)}
 				currentPage={currentPage}
 				totalPages={Math.ceil(
-					Number(data?.solutions.length) /
-						(itemsPerPage === 'all' ? Number(data?.solutions.length) : itemsPerPage),
+					Number(data?.solutions?.length) /
+						(itemsPerPage === 'all' ? Number(data?.solutions?.length) : itemsPerPage),
 				)}
 				onPageChange={handlePageChange}
 				onLimitChange={handleItemsPerPageChange}

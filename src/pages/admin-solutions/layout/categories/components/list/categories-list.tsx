@@ -105,11 +105,11 @@ export const SolCategoriesList: FC = () => {
 				rowClickHandler={rowClickHandler}
 			/>
 			<TableFooter
-				totalElements={Number(data?.categories.length)}
+				totalElements={Number(data?.categories?.length)}
 				currentPage={currentPage}
 				totalPages={Math.ceil(
-					Number(data?.categories.length) /
-						(itemsPerPage === 'all' ? Number(data?.categories.length) : itemsPerPage),
+					Number(data?.categories?.length) /
+						(itemsPerPage === 'all' ? Number(data?.categories?.length) : itemsPerPage),
 				)}
 				onPageChange={handlePageChange}
 				onLimitChange={handleItemsPerPageChange}

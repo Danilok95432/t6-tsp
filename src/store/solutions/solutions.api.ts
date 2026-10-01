@@ -31,7 +31,7 @@ export const solutionsApi = createApi({
 			{ title?: string; limit?: number; page?: number }
 		>({
 			query: ({ title, limit, page }) => ({
-				url: 'solutions_info/list',
+				url: 'solutions/list',
 				params: {
 					title,
 					limit,
@@ -42,13 +42,13 @@ export const solutionsApi = createApi({
 		}),
 		getNewIdSolution: build.query<SolutionsNewIdResponse, null>({
 			query: () => ({
-				url: `solutions_info/getnew`,
+				url: `solutions/getnew`,
 			}),
 			providesTags: ['Solutions'],
 		}),
 		deleteSolutionById: build.mutation<null, string>({
 			query: (solutionId) => ({
-				url: `solutions_info/delete`,
+				url: `solutions/delete`,
 				method: 'DELETE',
 				body: { id: solutionId },
 			}),
@@ -56,7 +56,7 @@ export const solutionsApi = createApi({
 		}),
 		getSolutionInfo: build.query<GoodsInfoResponse, string>({
 			query: (id) => ({
-				url: `solutions_info/edit`,
+				url: `solutions/edit`,
 				params: {
 					id,
 				},
@@ -65,7 +65,7 @@ export const solutionsApi = createApi({
 		}),
 		saveSolutionInfo: build.mutation<string, FieldValues>({
 			query: (FormData) => ({
-				url: `solutions_info/save`,
+				url: `solutions/save`,
 				method: 'POST',
 				body: FormData,
 			}),

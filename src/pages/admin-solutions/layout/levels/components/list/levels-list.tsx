@@ -105,11 +105,11 @@ export const SolLevelsist: FC = () => {
 				rowClickHandler={rowClickHandler}
 			/>
 			<TableFooter
-				totalElements={Number(data?.levels.length)}
+				totalElements={Number(data?.levels?.length)}
 				currentPage={currentPage}
 				totalPages={Math.ceil(
-					Number(data?.levels.length) /
-						(itemsPerPage === 'all' ? Number(data?.levels.length) : itemsPerPage),
+					Number(data?.levels?.length) /
+						(itemsPerPage === 'all' ? Number(data?.levels?.length) : itemsPerPage),
 				)}
 				onPageChange={handlePageChange}
 				onLimitChange={handleItemsPerPageChange}
