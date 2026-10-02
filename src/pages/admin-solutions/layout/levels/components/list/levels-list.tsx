@@ -82,12 +82,12 @@ export const SolLevelsist: FC = () => {
 	}
 
 	const rowClickHandler = (id: string) => {
-		navigate(`/solutions/info/${id}`)
+		navigate(`/solutions/sol-levels/${id}`)
 	}
 
 	const handleAddTypeClick = async () => {
 		const newId = await addMaker()
-		navigate(`/solutions/info/${newId}`)
+		navigate(`/solutions/sol-levels/${newId}`)
 	}
 
 	// if (isLoading || !TypesInfoData?.types) return <Loader />

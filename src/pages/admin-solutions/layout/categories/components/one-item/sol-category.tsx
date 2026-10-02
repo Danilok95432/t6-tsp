@@ -64,7 +64,7 @@ export const OneSolCategory = () => {
 		if (res) {
 			markAsSent(true)
 			if (action === 'save') {
-				navigate(`/${AdminRoute.Catalog}/${AdminRoute.CatalogCategories}`)
+				navigate(`/${AdminRoute.Solutions}/${AdminRoute.SolutionsCategories}`)
 			}
 		}
 	}
@@ -78,7 +78,7 @@ export const OneSolCategory = () => {
 	return (
 		<>
 			<Link
-				to={`/${AdminRoute.Catalog}/${AdminRoute.CatalogCategories}`}
+				to={`/${AdminRoute.Solutions}/${AdminRoute.SolutionsCategories}`}
 				className={classNames(adminStyles.adminReturnLink, styles.linkBack)}
 			>
 				Возврат к списку
@@ -115,7 +115,7 @@ export const OneSolCategory = () => {
 						</div>
 						<AdminControllers
 							variant='4'
-							outLink={`/${AdminRoute.Catalog}/${AdminRoute.CatalogCategories}`}
+							outLink={`/${AdminRoute.Solutions}/${AdminRoute.SolutionsCategories}`}
 							isSent={isSent}
 							actionHandler={setAction}
 						/>
@@ -123,7 +123,7 @@ export const OneSolCategory = () => {
 				</FormProvider>
 			</Container>
 			<Link
-				to={`/${AdminRoute.Catalog}/${AdminRoute.CatalogCategories}`}
+				to={`/${AdminRoute.Solutions}/${AdminRoute.SolutionsCategories}`}
 				className={classNames(adminStyles.adminReturnLink, styles.linkBack)}
 			>
 				Возврат к списку

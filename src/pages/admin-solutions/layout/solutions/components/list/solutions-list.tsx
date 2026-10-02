@@ -41,13 +41,13 @@ export const SolutionsList: FC = () => {
 	const tableTitles = [
 		'№',
 		'Название решения',
-		'Раздел решения',
 		'Описание решения',
+		'Раздел решения',
+		'Категория решения',
+		'Уровень решения',
 		'Стоимость оборудования',
 		'Стоимость монтажа',
 		'Общая сумма',
-		'Категория решения',
-		'Уровень решения',
 		'',
 	]
 	const formatObjectsTableData = (data: SolutionInfoElement[]) => {
@@ -57,22 +57,22 @@ export const SolutionsList: FC = () => {
 				cells: [
 					<p key='0'>{el.id}</p>,
 					<p key='1'>{el.name}</p>,
-					<p key='1'>{el.part}</p>,
 					<p key='2'>{el.desc}</p>,
-					<p key='3'>{el.sumItems}</p>,
-					<p key='4'>{el.sumWork}</p>,
-					<p key='5'>{el.totalSum}</p>,
-					<p key='6' className={styles.center}>
+					<p key='3'>{el.part}</p>,
+					<p key='4' className={styles.center}>
 						{el.category}
 					</p>,
-					<p key='7' className={styles.center}>
+					<p key='5' className={styles.center}>
 						{el.level}
 					</p>,
+					<p key='6'>{el.sumItems}</p>,
+					<p key='7'>{el.sumWork}</p>,
+					<p key='8'>{el.totalSum}</p>,
 					<RowController
 						id={el.id}
 						className={styles.rowActionButton}
 						removeHandler={rowDeleteHandler}
-						key='8'
+						key='9'
 					/>,
 				],
 			}
@@ -94,12 +94,12 @@ export const SolutionsList: FC = () => {
 	}
 
 	const rowClickHandler = (id: string) => {
-		navigate(`/solutions/info/${id}`)
+		navigate(`/solutions/sol-info/${id}`)
 	}
 
 	const handleAddTypeClick = async () => {
 		const newId = await addMaker()
-		navigate(`/solutions/info/${newId}`)
+		navigate(`/solutions/sol-info/${newId}`)
 	}
 
 	// if (isLoading || !TypesInfoData?.types) return <Loader />

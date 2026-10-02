@@ -82,12 +82,12 @@ export const SolCategoriesList: FC = () => {
 	}
 
 	const rowClickHandler = (id: string) => {
-		navigate(`/solutions/info/${id}`)
+		navigate(`/solutions/sol-categories/${id}`)
 	}
 
 	const handleAddTypeClick = async () => {
 		const newId = await addMaker()
-		navigate(`/solutions/info/${newId}`)
+		navigate(`/solutions/sol-categories/${newId}`)
 	}
 
 	// if (isLoading || !TypesInfoData?.types) return <Loader />

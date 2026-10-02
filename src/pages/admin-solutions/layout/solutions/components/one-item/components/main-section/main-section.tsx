@@ -21,7 +21,7 @@ export const MainSection: FC<MainSectionProps> = ({
 		<AdminSection className={styles.mainSection} isBlock={false}>
 			<ControlledInput name='title' label='Наименование решения*' margin='0 0 20px 0' />
 			<ControlledSelect
-				name='solution'
+				name='part'
 				label='Раздел (назначение) решения *'
 				selectOptions={solutionOption ?? [{ label: 'Выберите категорию', value: '0' }]}
 				margin='0 0 20px 0'

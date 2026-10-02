@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { type OneSolutionInputs, oneSolutionSchema } from './schema'
 import { FormProvider, type SubmitHandler, useForm } from 'react-hook-form'
 import { Link, useNavigate, useParams } from 'react-router-dom'
@@ -39,9 +40,6 @@ export const OneSolution = () => {
 		resolver: yupResolver(oneSolutionSchema),
 		defaultValues: {
 			hidden: false,
-			equipmentList: [],
-			tools: null, // или ''
-			count: '',
 		},
 	})
 	const { isSent, markAsSent } = useIsSent(methods.control)
@@ -49,15 +47,34 @@ export const OneSolution = () => {
 		const formData = new FormData()
 		formData.append('id', id)
 		formData.append('title', data.title)
-		formData.append('main_button', data.main_button ?? '')
+		formData.append('code', data.code)
 		formData.append('short', data.short ?? '')
 		formData.append('full', data.full ?? '')
+		formData.append('price1', data.price1 ?? '')
+		formData.append('price2', data.price2 ?? '')
+		formData.append('price3', data.price3 ?? '')
 		formData.append(
-			'parent',
-			typeof data.parent === 'string'
-				? data.parent
-				: data.parent && data.parent.length > 0
-					? data.parent[0].value
+			'level',
+			typeof data.level === 'string'
+				? data.level
+				: data.level && data.level.length > 0
+					? data.level[0].value
+					: '0',
+		)
+		formData.append(
+			'category',
+			typeof data.category === 'string'
+				? data.category
+				: data.category && data.category.length > 0
+					? data.category[0].value
+					: '0',
+		)
+		formData.append(
+			'part',
+			typeof data.part === 'string'
+				? data.part
+				: data.part && data.part.length > 0
+					? data.part[0].value
 					: '0',
 		)
 		formData.append('seo_title', data.seo_title ?? '')
@@ -65,26 +82,48 @@ export const OneSolution = () => {
 		formData.append('seo_keywords', data.seo_keywords ?? '')
 		formData.append('seo_virtual', data.seo_virtual ?? '')
 		formData.append('hidden', booleanToNumberString(data.hidden))
-		formData.append('use_main', booleanToNumberString(data.use_main))
+		formData.append('use_best', booleanToNumberString(data.use_best))
+		formData.append('use_rec', booleanToNumberString(data.use_rec))
+		formData.append('use_stop', booleanToNumberString(data.use_stop))
 		const res = await saveCategoryInfo(formData)
 		if (res) {
 			markAsSent(true)
 			if (action === 'save') {
-				navigate(`/${AdminRoute.Catalog}/${AdminRoute.CatalogCategories}`)
+				navigate(`/${AdminRoute.Solutions}/${AdminRoute.SolutionsInfo}`)
 			}
 		}
 	}
 
 	useEffect(() => {
 		if (data) {
-			methods.reset({ ...data })
+			const partOptions = data.part ?? []
+			const categoriesOptions = data.category ?? []
+			const levelOptions = data.level ?? []
+
+			// Находим нужные объекты для селектов
+			const partOption = partOptions.find((el) => Number(el.value) === Number(data.part_id))
+			const categoriesOption = categoriesOptions.find(
+				(el) => Number(el.value) === Number(data.category_id),
+			)
+			const levelOption = levelOptions.find((el) => Number(el.value) === Number(data.level_id))
+			// Исключаем не только brands_id/catalogs_id, но и brands/catalogs из restData
+			const { part_id, category_id, level_id, level, category, part, ...restData } = data
+
+			methods.reset({
+				// Поля для React Select
+				part: partOption ? [partOption] : [],
+				category: categoriesOption ? [categoriesOption] : [],
+				level: levelOption ? [levelOption] : [],
+				// Все остальные поля (без brands/catalogs/brands_id/catalogs_id)
+				...restData,
+			})
 		}
 	}, [data])
 
 	return (
 		<>
 			<Link
-				to={`/${AdminRoute.Catalog}/${AdminRoute.CatalogCategories}`}
+				to={`/${AdminRoute.Solutions}/${AdminRoute.SolutionsInfo}`}
 				className={classNames(adminStyles.adminReturnLink, styles.linkBack)}
 			>
 				Возврат к списку
@@ -95,10 +134,14 @@ export const OneSolution = () => {
 					<form onSubmit={methods.handleSubmit(onSubmit)} noValidate>
 						<div className={styles.oneNewsContent}>
 							<div className={styles.oneNewsContentLeft}>
-								<MainSection />
-								<ReqSection />
+								<MainSection
+									categoryOption={data?.category}
+									levelsOption={data?.level}
+									solutionOption={data?.part}
+								/>
+								<ReqSection toolsOptions={data?.tools} />
 								{/* <AdditionalSection /> */}
-								<MediaSection />
+								<MediaSection img={data?.img} documents={data?.documents} />
 								<SeoSection />
 							</div>
 							<div className={styles.oneNewsContentRight}>
@@ -127,14 +170,14 @@ export const OneSolution = () => {
 									contentRadio2={<>Нет</>}
 								/>
 								<SwitchedRadioBtns
-									name='use_old'
+									name='use_rec'
 									label='Рекомендовать'
 									$variant='switcher'
 									contentRadio1={<>Да</>}
 									contentRadio2={<>Нет</>}
 								/>
 								<SwitchedRadioBtns
-									name='use_new'
+									name='use_stop'
 									label='Продажи на стоп'
 									$variant='switcher'
 									contentRadio1={<>Да</>}
@@ -144,7 +187,7 @@ export const OneSolution = () => {
 						</div>
 						<AdminControllers
 							variant='4'
-							outLink={`/${AdminRoute.Catalog}/${AdminRoute.CatalogCategories}`}
+							outLink={`/${AdminRoute.Solutions}/${AdminRoute.SolutionsInfo}`}
 							isSent={isSent}
 							actionHandler={setAction}
 						/>
@@ -152,7 +195,7 @@ export const OneSolution = () => {
 				</FormProvider>
 			</Container>
 			<Link
-				to={`/${AdminRoute.Catalog}/${AdminRoute.CatalogCategories}`}
+				to={`/${AdminRoute.Solutions}/${AdminRoute.SolutionsInfo}`}
 				className={classNames(adminStyles.adminReturnLink, styles.linkBack)}
 			>
 				Возврат к списку

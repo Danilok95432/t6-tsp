@@ -10,6 +10,8 @@ import {
 	type SolutionCategoryResponse,
 	type SolutionInfoResponse,
 	type SolutionsNewIdResponse,
+	type SolutionOneItem,
+	type SolutionProjectInfo,
 } from 'src/types/solutions-types'
 
 export const solutionsApi = createApi({
@@ -54,7 +56,7 @@ export const solutionsApi = createApi({
 			}),
 			invalidatesTags: ['Solutions'],
 		}),
-		getSolutionInfo: build.query<GoodsInfoResponse, string>({
+		getSolutionInfo: build.query<SolutionOneItem, string>({
 			query: (id) => ({
 				url: `solutions/edit`,
 				params: {
@@ -189,7 +191,7 @@ export const solutionsApi = createApi({
 			}),
 			invalidatesTags: ['SolProjects'],
 		}),
-		getSolProjectInfo: build.query<GoodsInfoResponse, string>({
+		getSolProjectInfo: build.query<SolutionProjectInfo, string>({
 			query: (id) => ({
 				url: `solutions_projects/edit`,
 				params: {

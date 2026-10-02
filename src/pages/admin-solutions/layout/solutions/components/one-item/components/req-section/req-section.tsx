@@ -8,13 +8,19 @@ import { ControlledSelect } from 'src/components/controlled-select/controlled-se
 import { PlusIconSvg } from 'src/UI/icons/plusIconSVG'
 import { type OneSolutionInputs } from '../../schema'
 import { CloseMiniSVG } from 'src/UI/icons/closeMiniSVG'
+import { type SelOption } from 'src/types/select'
+import { type FC } from 'react'
 
-const equipmentOptions = [
-	{ label: 'Оборудование 1', value: '1' },
-	{ label: 'Оборудование 2', value: '2' },
-]
+// const equipmentOptions = [
+// 	{ label: 'Оборудование 1', value: '1' },
+// 	{ label: 'Оборудование 2', value: '2' },
+// ]
 
-export const ReqSection = () => {
+type ReqProps = {
+	toolsOptions?: SelOption[]
+}
+
+export const ReqSection: FC<ReqProps> = ({ toolsOptions = [{ label: '', value: '' }] }) => {
 	const { control, getValues, setValue } = useFormContext<OneSolutionInputs>()
 	const { fields, append, remove } = useFieldArray({
 		control,
@@ -33,8 +39,6 @@ export const ReqSection = () => {
 			}
 		} else if (typeof toolValueRaw === 'string') {
 			toolValue = toolValueRaw
-		} else if (toolValueRaw && typeof toolValueRaw === 'object' && 'value' in toolValueRaw) {
-			toolValue = String(toolValueRaw.value)
 		}
 
 		if (!toolValue || !countValue) {
@@ -42,7 +46,7 @@ export const ReqSection = () => {
 			return
 		}
 
-		const selectedOption = equipmentOptions.find((opt) => opt.value === toolValue)
+		const selectedOption = toolsOptions.find((opt) => opt.value === toolValue)
 		const label = selectedOption ? selectedOption.label : toolValue
 		const quantity = Number(countValue)
 
@@ -80,7 +84,7 @@ export const ReqSection = () => {
 
 			<FlexRow className={styles.toolsRow}>
 				<ControlledSelect
-					selectOptions={equipmentOptions}
+					selectOptions={toolsOptions}
 					label='Добавить оборудование'
 					name='tools'
 					className={styles.tools}
@@ -93,15 +97,15 @@ export const ReqSection = () => {
 			</FlexRow>
 
 			<ControlledInput
-				name='toolPrice'
+				name='price1'
 				label='Цена оборудования (автоматический расчет)'
 				margin='0 0 20px 0'
 			/>
-			<ControlledInput name='materialsPrice' label='Цена материалов' margin='0 0 20px 0' />
-			<ControlledInput name='workPrice' label='Цена работ (проект и монтаж)' margin='0 0 20px 0' />
-			<ControlledInput name='short_desc' label='Краткое описание' isTextarea margin='0 0 20px 0' />
+			<ControlledInput name='price2' label='Цена материалов' margin='0 0 20px 0' />
+			<ControlledInput name='price3' label='Цена работ (проект и монтаж)' margin='0 0 20px 0' />
+			<ControlledInput name='short' label='Краткое описание' isTextarea margin='0 0 20px 0' />
 			<QuillEditor
-				name='desc'
+				name='full'
 				label='Полное описание страницы'
 				$heightEditor='150px'
 				$maxWidth='1140px'

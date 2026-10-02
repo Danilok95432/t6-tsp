@@ -86,12 +86,12 @@ export const SolProjectsList: FC = () => {
 	}
 
 	const rowClickHandler = (id: string) => {
-		navigate(`/solutions/info/${id}`)
+		navigate(`/solutions/sol-projects/${id}`)
 	}
 
 	const handleAddTypeClick = async () => {
 		const newId = await addMaker()
-		navigate(`/solutions/info/${newId}`)
+		navigate(`/solutions/sol-projects/${newId}`)
 	}
 
 	// if (isLoading || !TypesInfoData?.types) return <Loader />
@@ -109,11 +109,11 @@ export const SolProjectsList: FC = () => {
 				rowClickHandler={rowClickHandler}
 			/>
 			<TableFooter
-				totalElements={Number(data?.projects.length)}
+				totalElements={Number(data?.projects?.length)}
 				currentPage={currentPage}
 				totalPages={Math.ceil(
-					Number(data?.projects.length) /
-						(itemsPerPage === 'all' ? Number(data?.projects.length) : itemsPerPage),
+					Number(data?.projects?.length) /
+						(itemsPerPage === 'all' ? Number(data?.projects?.length) : itemsPerPage),
 				)}
 				onPageChange={handlePageChange}
 				onLimitChange={handleItemsPerPageChange}
