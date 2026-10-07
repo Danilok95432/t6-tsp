@@ -4,6 +4,7 @@ import { FormProvider, type SubmitHandler, useForm } from 'react-hook-form'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { yupResolver } from '@hookform/resolvers/yup'
+import type { ObjectSchema } from 'yup'
 
 import { useIsSent } from 'src/hooks/sent-mark/sent-mark'
 
@@ -37,7 +38,7 @@ export const OneSolProject = () => {
 
 	const methods = useForm<OneSolProjectInputs>({
 		mode: 'onBlur',
-		resolver: yupResolver(oneSolProjectSchema),
+		resolver: yupResolver(oneSolProjectSchema as ObjectSchema<OneSolProjectInputs>),
 		defaultValues: {
 			hidden: false,
 		},
