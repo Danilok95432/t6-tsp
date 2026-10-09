@@ -56,6 +56,14 @@ export const solutionsApi = createApi({
 			}),
 			invalidatesTags: ['Solutions'],
 		}),
+		hideSolutionById: build.mutation<null, string>({
+			query: (solutionId) => ({
+				url: `solutions/hide`,
+				method: 'POST',
+				body: { id: solutionId },
+			}),
+			invalidatesTags: ['Solutions'],
+		}),
 		getSolutionInfo: build.query<SolutionOneItem, string>({
 			query: (id) => ({
 				url: `solutions/edit`,
@@ -134,13 +142,13 @@ export const solutionsApi = createApi({
 		}),
 		getNewIdSolLevel: build.query<SolutionsNewIdResponse, null>({
 			query: () => ({
-				url: `solutions_level/getnew`,
+				url: `solutions_levels/getnew`,
 			}),
 			providesTags: ['SolLevel'],
 		}),
 		deleteSolLevelById: build.mutation<null, string>({
 			query: (solutionId) => ({
-				url: `solutions_level/delete`,
+				url: `solutions_levels/delete`,
 				method: 'DELETE',
 				body: { id: solutionId },
 			}),
@@ -148,7 +156,7 @@ export const solutionsApi = createApi({
 		}),
 		getSolLevelInfo: build.query<GoodsInfoResponse, string>({
 			query: (id) => ({
-				url: `solutions_level/edit`,
+				url: `solutions_levels/edit`,
 				params: {
 					id,
 				},
@@ -157,7 +165,7 @@ export const solutionsApi = createApi({
 		}),
 		saveSolLevelInfo: build.mutation<string, FieldValues>({
 			query: (FormData) => ({
-				url: `solutions_level/save`,
+				url: `solutions_levels/save`,
 				method: 'POST',
 				body: FormData,
 			}),
@@ -217,6 +225,7 @@ export const {
 	useGetNewIdSolutionQuery,
 	useGetSolutionInfoQuery,
 	useSaveSolutionInfoMutation,
+	useHideSolutionByIdMutation,
 	// <----------------->
 	useDeleteSolCategoryByIdMutation,
 	useGetAllSolCategoriesQuery,

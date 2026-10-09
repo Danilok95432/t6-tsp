@@ -15,6 +15,7 @@ import {
 	useDeleteSolutionByIdMutation,
 	useGetAllSolutionsQuery,
 	useGetNewIdSolutionQuery,
+	useHideSolutionByIdMutation,
 } from 'src/store/solutions/solutions.api'
 import { type SolutionInfoElement } from 'src/types/solutions-types'
 
@@ -30,6 +31,7 @@ export const SolutionsList: FC = () => {
 	})
 	const { refetch: getNewId } = useGetNewIdSolutionQuery(null)
 	const [deleteTypeById] = useDeleteSolutionByIdMutation()
+	const [hideSolutionById] = useHideSolutionByIdMutation()
 
 	const navigate = useNavigate()
 
@@ -72,6 +74,7 @@ export const SolutionsList: FC = () => {
 						id={el.id}
 						className={styles.rowActionButton}
 						removeHandler={rowDeleteHandler}
+						hideHandler={rowHideHandler}
 						key='9'
 					/>,
 				],
@@ -91,6 +94,10 @@ export const SolutionsList: FC = () => {
 
 	const rowDeleteHandler = async (id: string) => {
 		await deleteTypeById(id)
+	}
+
+	const rowHideHandler = async (id: string) => {
+		await hideSolutionById(id)
 	}
 
 	const rowClickHandler = (id: string) => {

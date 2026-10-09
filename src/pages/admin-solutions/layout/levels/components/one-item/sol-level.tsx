@@ -20,16 +20,16 @@ import adminStyles from 'src/routes/admin-layout/index.module.scss'
 import classNames from 'classnames'
 import { booleanToNumberString } from 'src/helpers/utils'
 import {
-	useGetSolutionInfoQuery,
-	useSaveSolutionInfoMutation,
+	useGetSolLevelInfoQuery,
+	useSaveSolLevelInfoMutation,
 } from 'src/store/solutions/solutions.api'
 import { MediaSection } from './components/media-section/media-section'
 
 export const OneSolLevel = () => {
 	const { id = '0' } = useParams()
 
-	const { data } = useGetSolutionInfoQuery(id)
-	const [saveCategoryInfo] = useSaveSolutionInfoMutation()
+	const { data } = useGetSolLevelInfoQuery(id)
+	const [saveCategoryInfo] = useSaveSolLevelInfoMutation()
 	const [action, setAction] = useState<'apply' | 'save'>('apply')
 	const navigate = useNavigate()
 

@@ -60,6 +60,7 @@ export const SolLevelsist: FC = () => {
 						id={el.id}
 						className={styles.rowActionButton}
 						removeHandler={rowDeleteHandler}
+						noHide
 						key='8'
 					/>,
 				],
