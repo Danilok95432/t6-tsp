@@ -10,7 +10,6 @@ export type OneSolProjectInputs = {
 	solution: SelOption[] | string
 	short?: string
 	full?: string
-	hidden?: boolean
 	customer: string
 	finalPrice: string
 	seo_title?: string

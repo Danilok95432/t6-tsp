@@ -7,9 +7,6 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { useIsSent } from 'src/hooks/sent-mark/sent-mark'
 
 import { Container } from 'src/UI/Container/Container'
-import { SwitchedRadioBtns } from 'src/components/switched-radio-btns/switched-radio-btns'
-import { SwitchedHiddenSvg } from 'src/UI/icons/switchedHiddenSVG'
-import { SwitchedShowSvg } from 'src/UI/icons/switchedShowSVG'
 import { AdminControllers } from 'src/components/admin-controllers/admin-controllers'
 import { AdminRoute } from 'src/routes/admin-routes/consts'
 
@@ -18,7 +15,6 @@ import { MainSection } from './components/main-section/main-section'
 import { SeoSection } from 'src/modules/seo-section/seo-section'
 import adminStyles from 'src/routes/admin-layout/index.module.scss'
 import classNames from 'classnames'
-import { booleanToNumberString } from 'src/helpers/utils'
 import {
 	useGetSolLevelInfoQuery,
 	useSaveSolLevelInfoMutation,
@@ -36,9 +32,6 @@ export const OneSolLevel = () => {
 	const methods = useForm<OneSolCategoryInputs>({
 		mode: 'onBlur',
 		resolver: yupResolver(oneSolCategorySchema),
-		defaultValues: {
-			hidden: false,
-		},
 	})
 	const { isSent, markAsSent } = useIsSent(methods.control)
 	const onSubmit: SubmitHandler<OneSolCategoryInputs> = async (data) => {
@@ -47,19 +40,10 @@ export const OneSolLevel = () => {
 		formData.append('title', data.title)
 		formData.append('short', data.short ?? '')
 		formData.append('full', data.full ?? '')
-		formData.append(
-			'parent',
-			typeof data.parent === 'string'
-				? data.parent
-				: data.parent && data.parent.length > 0
-					? data.parent[0].value
-					: '0',
-		)
 		formData.append('seo_title', data.seo_title ?? '')
 		formData.append('seo_description', data.seo_description ?? '')
 		formData.append('seo_keywords', data.seo_keywords ?? '')
 		formData.append('seo_virtual', data.seo_virtual ?? '')
-		formData.append('hidden', booleanToNumberString(data.hidden))
 		const res = await saveCategoryInfo(formData)
 		if (res) {
 			markAsSent(true)
@@ -93,7 +77,7 @@ export const OneSolLevel = () => {
 								<MediaSection />
 								<SeoSection />
 							</div>
-							<div className={styles.oneNewsContentRight}>
+							{/* <div className={styles.oneNewsContentRight}>
 								<SwitchedRadioBtns
 									name='hidden'
 									label='Спрятать'
@@ -111,7 +95,7 @@ export const OneSolLevel = () => {
 										</>
 									}
 								/>
-							</div>
+							</div> */}
 						</div>
 						<AdminControllers
 							variant='4'

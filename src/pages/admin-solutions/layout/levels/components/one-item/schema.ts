@@ -1,5 +1,4 @@
 import { type ImageItemWithText } from 'src/types/photos'
-import { type SelOption } from 'src/types/select'
 import * as yup from 'yup'
 
 export type OneSolCategoryInputs = {
@@ -13,8 +12,6 @@ export type OneSolCategoryInputs = {
 	seo_keywords?: string
 	seo_virtual?: string
 	url?: string
-	hidden?: boolean
-	parent?: SelOption[] | string
 }
 
 export const oneSolCategorySchema = yup.object().shape({
